@@ -1,0 +1,37 @@
+@import "scss/common";
+
+.block{
+
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  background-color: black;
+
+  &__container{
+
+    position: absolute;
+    left: 0;
+    width: 100%;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    > div{
+      display: flex;
+      align-items: center;
+
+      h1{
+        color: $color-primary-negative;
+        font-size: rem(50px);
+
+        span{
+          color: $color-dinamiza;
+        }
+
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,54 @@
+//
+//  Media Query - Breakpoints
+//
+$width-sm: 576; //Bootstrap 4 standard
+$width-md: 768; //Bootstrap 4 standard
+$width-lg: 992; //Bootstrap 4 standard
+$width-xl: 1200; //Bootstrap 4 standard or 1200
+
+$height-xl: 768px;
+
+//
+//  Font size
+//
+$size-h1: 80px;
+
+$size-h2: 46px;
+$size-mobile-h2: 30px;
+
+$size-h3: 32px;
+
+$size-h4: 22px;
+
+$size-p: 15px;
+$size-mobile-p: 12px;
+
+
+//
+//  Sizes
+//
+$border-radius: 9px;
+
+//
+//  Path
+//
+
+$path-image: "../../../images/";
+$path-svg: "../../../images/svg/";
+
+//
+//  Colors & Gradients
+//
+$color-primary: #000000;
+$color-primary-negative: #ffffff;
+$color-dinamiza: #ee3537;
+$color-decoration-light: #00CEC0;
+$color-subtitle: #77a2a0;
+$color-elements: #D2E0DD;
+$color-elements-light: #e5e5e5;
+
+$linear-gradient: linear-gradient(64.98deg, #00C3A9 4.92%, #0097C2 51.4%, #002980 95.06%);
+$linear-gradient-opposite: linear-gradient(-64.98deg, #00C3A9 4.92%, #0097C2 51.4%, #002980 95.06%);
+
+$box-shadow: 0px 4px 50px rgba(30, 44, 44, 0.19);
+$box-shadow-light: 0px 4px 50px rgba(30, 44, 44, 0.05);

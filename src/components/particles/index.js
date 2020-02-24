@@ -1,6 +1,6 @@
 import React from 'react'
 import App from "./scripts/App"
-import './style.scss'
+import style from './style.module.scss'
 
 class Particles extends React.Component {
   // componentDidMount() {
@@ -20,7 +20,7 @@ class Particles extends React.Component {
   render() {
     return (
       <div>
-        <div className={'particles-container'}></div>
+        <div className={style.container}></div>
       </div>
     )
   }
