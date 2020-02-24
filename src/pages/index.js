@@ -17,7 +17,7 @@ class Index extends React.Component {
       <Layout location={location}>
         <Meta site={siteMetadata} title="Profile" />
 
-          <HeaderHome title={'test'} location={'asdasdasd'} />
+          <HeaderHome title={'test'} />
 
       </Layout>
     )
