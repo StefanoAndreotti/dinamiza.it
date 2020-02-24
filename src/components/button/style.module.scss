@@ -1,0 +1,27 @@
+@import "scss/common";
+
+.btnCustom{
+
+  position: relative;
+  font-family: 'Lato';
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: em(1.3px,13px);
+  color: $color-elements;
+  line-height: .9em;
+
+  padding: rem(9px 25px);
+  border: 1px solid $color-elements;
+
+  background-color: transparent;
+
+  transition: .2s;
+
+  &:hover{
+    background-color: $color-dinamiza;
+    color: $color-primary-negative;
+    border-color: $color-primary-negative;
+    text-decoration: none;
+  }
+
+}

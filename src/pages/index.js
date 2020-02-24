@@ -9,17 +9,19 @@ import Meta from 'components/meta'
 import Icon from 'components/icon'
 import HeaderHome from 'blocks/headerHome'
 
-import 'scss/pages/index.scss'
+import style from '../scss/pages/index.scss'
 
 class Index extends React.Component {
   render() {
     return (
-      <Layout location={location}>
-        <Meta site={siteMetadata} title="Profile" />
+      <div className={'page-home'}>
+        <Layout location={location}>
+          <Meta site={siteMetadata} title="" />
 
-          <HeaderHome title={'test'} />
+            <HeaderHome title={'test'} location={location} />
 
-      </Layout>
+        </Layout>
+      </div>
     )
   }
 }

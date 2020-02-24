@@ -16,21 +16,47 @@
     top: 50%;
     transform: translateY(-50%);
 
-    > div{
-      display: flex;
-      align-items: center;
 
-      h1{
-        color: $color-primary-negative;
-        font-size: rem(50px);
+    h1{
+      color: $color-primary-negative;
+      font-size: rem(50px);
 
-        span{
-          color: $color-dinamiza;
-        }
-
+      span{
+        color: $color-dinamiza;
       }
 
     }
+
+    &__payoff{
+
+      position: absolute;
+      bottom: -70%;
+
+      h4 {
+        font-family: "Lato";
+        color: $color-primary-negative;
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 13px;
+        line-height: 1.4em;
+        letter-spacing: em(1.3px,13px);
+        span {
+          display: block;
+          opacity: .8;
+        }
+      }
+
+      hr{
+        display: inline-block;
+        width: 5px;
+        height: 25px;
+        background-color: $color-dinamiza;
+        margin: rem(0 15px 0 0);
+      }
+
+    }
+
+
 
   }
 

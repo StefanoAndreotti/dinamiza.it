@@ -2,11 +2,18 @@
 //  Style - Include
 //
 
+@import 'reset';
+
 // Variables and Fonts
 @import 'variables';
 @import 'fonts';
 
 // Lib
+@import "~modern-normalize";
+@import "~prismjs";
+@import "~animate.css";
+$fa-font-path: "~font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome";
 @import '~bootstrap';
 
 // Function, mixin

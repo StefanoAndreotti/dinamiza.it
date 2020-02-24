@@ -7,3 +7,8 @@ body{
 h1{
   font-family: "Montserrat";
 }
+
+::selection {
+  background-color: $color-dinamiza;
+  color: white;
+}

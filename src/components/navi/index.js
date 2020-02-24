@@ -9,9 +9,12 @@ class Navi extends React.Component {
     return (
       <nav className={`navbar navbar-expand navbar-dark flex-column flex-md-row fixed-top ${style.navbar}`}>
         <div className="container-fluid">
-          <Link className="text-center" to="/">
-            <img className={style.navbar__logo} src={'/img/logo-navbar.svg'} alt={title} />
-          </Link>
+          <div className={style.navbar__logoContainer}>
+            <Link className="text-center" to="/">
+              <img className={style.navbar__logo} src={'/img/logo-navbar.svg'} alt={title} />
+              <h1>Dinamiza</h1>
+            </Link>
+          </div>
           <div className={`navbar-nav-scroll ${style.navbar__menu}`}>
             <ul className="navbar-nav bd-navbar-nav flex-row">
               <li

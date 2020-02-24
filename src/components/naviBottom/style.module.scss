@@ -1,0 +1,61 @@
+@import "scss/common";
+
+.navbar__bottom{
+
+  position: fixed;
+  width: rem(71px);
+  left: 0px;
+  bottom: rem(80px);
+
+  &__content{
+
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    left: 100%;
+
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+
+    &__social__container{
+      ul{
+
+        display: flex;
+        width: 100%;
+        margin-top: rem(35px);
+        list-style-type: none;
+
+        li{
+
+          margin-bottom: rem(25px);
+          transform: rotate(90deg);
+
+          > a{
+
+
+            color: #c1c1c1;
+            font-size: 19px;
+            transition: .2s;
+
+            &:hover{
+              color: $color-dinamiza;
+              text-decoration: none;
+            }
+
+          }
+
+        }
+      }
+    }
+
+    &__btn {
+      margin: rem(0px 9px);
+      > a {
+        padding: rem(25px 9px);
+      }
+    }
+
+  }
+
+}

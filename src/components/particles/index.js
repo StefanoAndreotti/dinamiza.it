@@ -3,13 +3,7 @@ import App from "./scripts/App"
 import style from './style.module.scss'
 
 class Particles extends React.Component {
-  // componentDidMount() {
-  //   const script = document.createElement("script");
-  //   script.src = "static-scripts/particles.js";
-  //   script.async = true;
-  //
-  //   document.body.appendChild(script);
-  // }
+
   componentDidMount() {
 
     const app = new App();
@@ -20,7 +14,7 @@ class Particles extends React.Component {
   render() {
     return (
       <div>
-        <div className={style.container}></div>
+        <div className={`particles-container ${style.container}`}></div>
       </div>
     )
   }

@@ -1,15 +1,12 @@
+import style from 'scss/global.scss'
 import React from 'react'
-import emergence from 'emergence.js'
 
+import emergence from 'emergence.js'
 import Navi from 'components/navi'
 import Footer from 'components/footer'
-import { siteMetadata } from '../../../gatsby-config'
 
-import 'modern-normalize/modern-normalize.css'
-import 'prismjs/themes/prism.css'
-import 'animate.css/animate.css'
-import 'font-awesome/css/font-awesome.css'
-import 'scss/global.scss'
+import { siteMetadata } from '../../../gatsby-config'
+import NaviBottom from "components/naviBottom";
 
 class Layout extends React.Component {
   componentDidMount() {
@@ -26,6 +23,7 @@ class Layout extends React.Component {
       <div>
         <Navi title={siteMetadata.title} {...this.props} />
         {children}
+        <NaviBottom />
         <Footer title={siteMetadata.title} author={siteMetadata.author} />
       </div>
     )

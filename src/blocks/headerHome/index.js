@@ -11,7 +11,16 @@ class HeaderHome extends React.Component {
         <Particles />
         <div className={style.block__container}>
           <div className={'container'}>
-            <h1>Connettiamo valore <span>attraverso la tecnologia</span></h1>
+            <div className={'row'}>
+
+              <h1>Connettiamo valore <span>attraverso la tecnologia</span></h1>
+
+              <div className={style.block__container__payoff}>
+                <hr />
+                <h4><span>your idea.</span> our amazing creation</h4>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
