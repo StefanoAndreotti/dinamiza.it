@@ -13,6 +13,9 @@ import style from '../scss/pages/index.scss'
 
 class Index extends React.Component {
   render() {
+
+    const { location, data } = this.props
+
     return (
       <div className={'page-home'}>
         <Layout location={location}>
