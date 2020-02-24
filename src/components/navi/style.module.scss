@@ -60,4 +60,43 @@
     }
   }
 
+  &__careersContainer{
+
+    position: relative;
+    width: 71px;
+    height: 71px;
+
+    > a {
+
+      position: absolute;
+      display: flex;
+      align-items: center;
+      top: 100%;
+      color: $color-elements;
+      writing-mode: vertical-lr;
+      text-orientation: mixed;
+      transform: rotate(180deg);
+
+      transition: color .2s;
+
+      i {
+        transform: rotate(180deg);
+        margin-bottom: rem(17px);
+      }
+      span {
+        font-family: 'Lato';
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: em(1.3px, 13px);
+      }
+
+      &:hover{
+        text-decoration: none;
+        color: $color-dinamiza;
+      }
+
+    }
+  }
+
 }

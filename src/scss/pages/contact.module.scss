@@ -1,0 +1,16 @@
+@import '../common';
+
+.header{
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+
+  h2{
+    font-family: 'Montserrat';
+    color: #666666;
+  }
+
+}

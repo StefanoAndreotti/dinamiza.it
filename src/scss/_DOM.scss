@@ -8,6 +8,10 @@ h1{
   font-family: "Montserrat";
 }
 
+.color-dinamiza{
+  color: $color-dinamiza;
+}
+
 ::selection {
   background-color: $color-dinamiza;
   color: white;

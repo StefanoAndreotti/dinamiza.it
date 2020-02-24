@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatstrap',
-    description: 'Gatsby starter for bootstrap a blog',
-    siteUrl: 'https://gatstrap.netlify.com',
-    author: 'jaxx2104',
-    twitter: 'jaxx2104',
+    title: 'Dinamiza',
+    description: 'Digital Agency',
+    siteUrl: 'https://dinamiza.it',
+    author: 'filippobenozzi',
+    twitter: '',
     adsense: '',
   },
   pathPrefix: '/',
@@ -50,22 +50,22 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Gatstrap',
-        short_name: 'Gatstrap',
-        description: 'Gatsby starter for bootstrap a blog',
-        homepage_url: 'https://gatstrap.netlify.com',
+        name: 'Dinamiza',
+        short_name: 'Dinamiza',
+        description: 'Digital Agency',
+        homepage_url: 'https://dinamiza.it',
         start_url: '/',
         background_color: '#fff',
-        theme_color: '#673ab7',
+        theme_color: '#ee3537',
         display: 'standalone',
         icons: [
           {
-            src: '/img/android-chrome-192x192.png',
+            src: '/img/title_icon.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/img/android-chrome-512x512.png',
+            src: '/img/title_icon.png',
             sizes: '512x512',
             type: 'image/png',
           },
