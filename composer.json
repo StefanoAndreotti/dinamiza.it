@@ -1,0 +1,12 @@
+{
+    "name": "dinamiza/dinamiza",
+    "authors": [
+        {
+            "name": "Filippo Benozzi",
+            "email": "filippo.benozzi@dinamiza.it"
+        }
+    ],
+    "require": {
+        "swiftmailer/swiftmailer": "^6.0"
+    }
+}

@@ -8,6 +8,12 @@ h1{
   font-family: "Montserrat";
 }
 
+h2{
+  font-family: 'Montserrat';
+  font-size: rem(35px);
+  line-height: em(45px,35px);
+}
+
 .color-dinamiza{
   color: $color-dinamiza;
 }

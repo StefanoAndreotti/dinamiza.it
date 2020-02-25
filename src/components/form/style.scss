@@ -1,0 +1,18 @@
+.form-contact-style-dinamiza{
+
+  color: white;
+
+  form{
+
+    > span{
+      display: inline-block;
+    }
+
+    > span:nth-child(0){
+      display: block;
+      width: 100%;
+    }
+
+  }
+
+}
