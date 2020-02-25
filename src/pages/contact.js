@@ -23,12 +23,12 @@ class Contact extends React.Component {
         msg: ''
       },
       fieldsConfig:  [
-        { id: 1, label: '', fieldName: 'firstName', type: 'text',placeholder:'Your First Name', isRequired: true , className:'first-name-field'},
-        { id: 2, label: '', fieldName: 'lastName', type: 'text', placeholder: 'Your Last Name', isRequired: true , className:'last-name-field'},
-        { id: 3, label: '', fieldName: 'email', type: 'email', placeholder: ' Your Email', isRequired: true , className:'email-field'},
-        { id: 4, label: '', fieldName: 'msg', type: 'textarea',placeholder:'Write something.....', isRequired: true , className:'message-field'},
-        { id: 5, label: 'Privacy Policy', fieldName: 'policy', type: 'radio', placeholder:'Write something.....', name1: 'Accetto', isRequired: true , className:'message-field'},
-        { id: 6, label: 'Marketing', fieldName: 'marketing', type: 'radio', placeholder:'', name1: 'Accetto', name2: 'Rifiuto', isRequired: true , className:'message-field'},
+        { id: 1, label: '', fieldName: 'firstName', type: 'text',placeholder:'Nome', isRequired: true , className:'first-name-field'},
+        { id: 2, label: '', fieldName: 'lastName', type: 'text', placeholder: 'Cognome', isRequired: true , className:'last-name-field'},
+        { id: 3, label: '', fieldName: 'email', type: 'email', placeholder: ' eMail', isRequired: true , className:'email-field'},
+        { id: 4, label: '', fieldName: 'msg', type: 'textarea',placeholder:'Messaggio', isRequired: true , className:'message-field'},
+        { id: 5, label: 'Consenso al trattamento di dati personali ai sensi del D. LGS. N. 196/03 e del REG. UE 2016/679 In relazione all\'informativa che è stata fornita e consultabile qui.', fieldName: 'policy', type: 'radio', placeholder:'Write something.....', name1: 'Accetto', isRequired: true , className:'message-field'},
+        { id: 6, label: 'Consenso al trattamento di dati personali ai sensi del D. LGS. N. 196/03 e del REG. UE 2016/679 In relazione all\'informativa che è stata fornita e consultabile qui.', fieldName: 'marketing', type: 'radio', placeholder:'', name1: 'Accetto', name2: 'Rifiuto', isRequired: true , className:'message-field'},
       ]
     }
 
@@ -37,6 +37,7 @@ class Contact extends React.Component {
         <Meta site={siteMetadata} title="Contattaci" />
 
         <div className={style.header}>
+
           <div className={'container'}>
             <div className={'row'}>
 
@@ -51,7 +52,14 @@ class Contact extends React.Component {
               </div>
 
             </div>
+
+            <div className={style.header__payoff}>
+              <hr />
+              <h4><span>your idea.</span> our amazing creation</h4>
+            </div>
+
           </div>
+
         </div>
 
       </Layout>

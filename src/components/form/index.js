@@ -25,7 +25,7 @@ class Form extends React.Component {
     e.preventDefault();
     axios({
       method: "post",
-      url: 'http://gatsby.it.l/public/mailer/api.php',
+      url: '/mailer/api.php',
       headers: { "content-type": "application/json" },
       data: this.state
     })
