@@ -8,13 +8,19 @@ import Footer from 'components/footer'
 import { siteMetadata } from '../../../gatsby-config'
 import NaviBottom from "components/naviBottom";
 
+import Smooth from './smooth'
+
 class Layout extends React.Component {
   componentDidMount() {
     emergence.init()
+
+    new Smooth()
+
   }
 
   componentDidUpdate() {
     emergence.init()
+    new Smooth()
   }
 
   render() {
@@ -22,7 +28,11 @@ class Layout extends React.Component {
     return (
       <div>
         <Navi title={siteMetadata.title} {...this.props} />
-        {children}
+        <div data-scroll>
+          <div data-scroll-content>
+            {children}
+          </div>
+        </div>
         <NaviBottom />
         <Footer title={siteMetadata.title} author={siteMetadata.author} />
       </div>
