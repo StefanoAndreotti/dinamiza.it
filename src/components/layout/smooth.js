@@ -9,13 +9,15 @@ const math = {
   }
 }
 
-const config = {
-  height: window.innerHeight,
-  width: window.innerWidth
-}
-
 export default class Smooth {
+
   constructor() {
+
+    const config = {
+      height: window.innerHeight,
+      width: window.innerWidth
+    }
+
     this.bindMethods()
 
     this.data = {
@@ -70,12 +72,16 @@ export default class Smooth {
   }
 
   run() {
+
+    const config = {
+      height: window.innerHeight,
+      width: window.innerWidth
+    }
+
     this.data.last = math.lerp(this.data.last, this.data.current, this.data.ease)
     if (this.data.last < .1) {
       this.data.last = 0
     }
-
-    console.log(this.data.last)
 
     const diff = this.data.current - this.data.last
     const acc = diff / config.width

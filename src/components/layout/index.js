@@ -7,17 +7,14 @@ import Footer from 'components/footer'
 
 import { siteMetadata } from '../../../gatsby-config'
 import NaviBottom from "components/naviBottom";
-
-import Smooth from './smooth'
+import Smooth from "./smooth";
 
 class Layout extends React.Component {
+
   componentDidMount() {
     emergence.init()
-
     new Smooth()
-
   }
-
   componentDidUpdate() {
     emergence.init()
     new Smooth()
