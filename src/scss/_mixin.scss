@@ -1,0 +1,42 @@
+//
+//  Mixin
+//
+
+@mixin lines-decoration{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  > div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+
+    > div{
+
+      height: 100%;
+
+      > div{
+        height: 100%;
+      }
+
+    }
+
+    [data-first-line]:after,[data-second-line]:before{
+      content: "";
+      position: absolute;
+      display: block;
+      width: 1px;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.1);
+      top: 0;
+      left: 0;
+      margin-left: 15px;
+    }
+
+  }
+
+}

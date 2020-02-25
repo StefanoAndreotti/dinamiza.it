@@ -1,4 +1,4 @@
-body{
+body,html{
   font-family: "Playfair Display";
   font-size: $size-p;
   line-height: em(23px,$size-p);
@@ -21,4 +21,55 @@ h2{
 ::selection {
   background-color: $color-dinamiza;
   color: white;
+}
+
+.is-background-center-cover{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.is-overlap{
+
+  position: relative;
+
+  > .container-fluid{
+    position: absolute;
+    top: 0;
+
+    @include media-breakpoint-down(sm){
+      position: relative;
+    }
+
+  }
+
+}
+.is-overlap-fluid--firstchild{
+
+  position: relative;
+
+  .container-fluid:first-child{
+    position: absolute;
+    top: 0;
+
+    @include media-breakpoint-down(sm){
+      position: relative;
+    }
+
+  }
+
+}
+.is-overlap-fluid--lastchild{
+
+  position: relative;
+
+  .container-fluid:last-child{
+    position: absolute;
+    top: 0;
+  }
+
+}
+
+.no-padding{
+  padding: 0;
 }

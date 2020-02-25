@@ -6,6 +6,7 @@ import Meta from 'components/meta'
 
 import style from 'scss/pages/contact.module.scss'
 import Form from "components/form";
+import Lines from "components/lines";
 
 class Contact extends React.Component {
   render() {
@@ -38,6 +39,8 @@ class Contact extends React.Component {
 
         <div className={style.header}>
 
+          <Lines />
+
           <div className={'container'}>
             <div className={'row'}>
 
@@ -60,6 +63,26 @@ class Contact extends React.Component {
 
           </div>
 
+        </div>
+
+        <div className={`is-overlap ${style.mainContainer}`}>
+          <div className={'container-fluid no-padding'}>
+            <div className={'offset-md-5 col-md-7 no-padding'}>
+              <div className={`is-background-center-cover ${style.mainContainer__image}`} style={{ backgroundImage: 'url(https://plh.fpp.li/1500x1500)' }}></div>
+            </div>
+          </div>
+          <div className={'container'}>
+            <div className={'col-md-4 d-flex flex-wrap'}>
+              <p className={style.mainContainer__address}>
+                Via B. Maderna, 7 | Mestre (VE)<br/>
+                <a href={'mailto:info@dinamiza.it'}>info@dinamiza.it</a><br/>
+                <span>TEL. +39 041 998062</span>
+              </p>
+              <p className={style.mainContainer__partners}>
+                Siamo una Digital Agency parte di StarSoftware, gruppo operante nel settore IT.
+              </p>
+            </div>
+          </div>
         </div>
 
       </Layout>

@@ -2,12 +2,14 @@ import React from 'react'
 import Particles from 'components/particles'
 
 import style from './style.module.scss'
+import Lines from "components/lines";
 
 class HeaderHome extends React.Component {
   render() {
     const { location, title } = this.props
     return (
       <div className={style.block}>
+        <Lines />
         <Particles />
         <div className={style.block__container}>
           <div className={'container'}>
