@@ -75,7 +75,7 @@ class Contact extends React.Component {
             <div className={'col-md-4 d-flex flex-wrap'}>
               <p className={style.mainContainer__address}>
                 Via B. Maderna, 7 | Mestre (VE)<br/>
-                <a href={'mailto:info@dinamiza.it'}>info@dinamiza.it</a><br/>
+                <a href={'mailto:info@dinamiza.it'} data-hover>info@dinamiza.it</a><br/>
                 <span>TEL. +39 041 998062</span>
               </p>
               <p className={style.mainContainer__partners}>
