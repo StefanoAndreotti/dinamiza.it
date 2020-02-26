@@ -46,13 +46,13 @@ class Layout extends React.Component {
           </div>
         </div>
         <NaviBottom />
+        <Footer title={siteMetadata.title} author={siteMetadata.author} />
 
         <div className={`cursor ${styleLayout.cursor}`}>
           <div className="cursor__inner cursor__inner--circle" data-cursor-circle></div>
           <div className="cursor__inner cursor__inner--dot" data-cursor-dot></div>
         </div>
 
-        <Footer title={siteMetadata.title} author={siteMetadata.author} />
       </div>
     )
   }

@@ -15,6 +15,11 @@ h2{
   line-height: em(45px,35px);
 }
 
+p{
+  font-size: $size-p;
+  line-height: em(23px, $size-p);
+}
+
 .color-dinamiza{
   color: $color-dinamiza;
 }

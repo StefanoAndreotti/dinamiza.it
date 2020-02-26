@@ -12,19 +12,19 @@ class NaviBottom extends React.Component {
 
           <div className={style.navbar__bottom__content__social__container}>
             <ul>
-              <li>
+              <li data-hover>
                 <a href=""><i className="fa fa-twitter" aria-hidden="true"></i></a>
               </li>
-              <li>
+              <li data-hover>
                 <a href=""><i className="fa fa-linkedin" aria-hidden="true"></i></a>
               </li>
-              <li>
+              <li data-hover>
                 <a href=""><i className="fa fa-facebook-square" aria-hidden="true"></i></a>
               </li>
             </ul>
           </div>
 
-          <div className={style.navbar__bottom__content__btn}>
+          <div data-hover className={style.navbar__bottom__content__btn}>
             <Button>Let's talk</Button>
           </div>
 

@@ -56,7 +56,7 @@ class Navi extends React.Component {
           </div>
           <div className="navbar-nav flex-row d-none d-md-flex">
             <div className={style.navbar__careersContainer}>
-              <a href={''}>
+              <a href={''} data-hover>
                 <i className="fa fa-user" aria-hidden="true"></i>
                 <span>Careers</span>
               </a>
