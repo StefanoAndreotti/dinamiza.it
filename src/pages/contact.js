@@ -45,7 +45,7 @@ class Contact extends React.Component {
             <div className={'row'}>
 
               <div className={'col-md-6'}>
-                <h2>Hai delle <span className={'color-dinamiza'}>idee digitali</span> interessanti?<br />Vieni a trovarci!</h2>
+                <h2>Hai delle <span className={'has-color-dinamiza'}>idee digitali</span> interessanti?<br />Vieni a trovarci!</h2>
               </div>
 
               <div className={'col-md-6'}>

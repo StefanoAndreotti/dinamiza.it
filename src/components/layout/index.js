@@ -8,16 +8,31 @@ import Footer from 'components/footer'
 import { siteMetadata } from '../../../gatsby-config'
 import NaviBottom from "components/naviBottom";
 import Smooth from "./smooth";
+import CursorFx from "./cursor";
+
+import styleLayout from './style.module.scss'
 
 class Layout extends React.Component {
 
   componentDidMount() {
     emergence.init()
     new Smooth()
+    const cursor = new CursorFx(document.querySelector('.cursor'))
+    document.querySelectorAll('[data-hover]').forEach((link) => {
+      link.addEventListener('mouseenter', () => cursor.enter() );
+      link.addEventListener('mouseleave', () => cursor.leave() );
+      link.addEventListener('click', () => cursor.click() );
+    });
   }
   componentDidUpdate() {
     emergence.init()
     new Smooth()
+    const cursor = new CursorFx(document.querySelector('.cursor'))
+    document.querySelectorAll('[data-hover]').forEach((link) => {
+      link.addEventListener('mouseenter', () => cursor.enter() );
+      link.addEventListener('mouseleave', () => cursor.leave() );
+      link.addEventListener('click', () => cursor.click() );
+    });
   }
 
   render() {
@@ -31,6 +46,12 @@ class Layout extends React.Component {
           </div>
         </div>
         <NaviBottom />
+
+        <div className={`cursor ${styleLayout.cursor}`}>
+          <div className="cursor__inner cursor__inner--circle" data-cursor-circle></div>
+          <div className="cursor__inner cursor__inner--dot" data-cursor-dot></div>
+        </div>
+
         <Footer title={siteMetadata.title} author={siteMetadata.author} />
       </div>
     )

@@ -18,6 +18,7 @@ class Navi extends React.Component {
           <div className={`navbar-nav-scroll ${style.navbar__menu}`}>
             <ul className="navbar-nav bd-navbar-nav flex-row">
               <li
+                data-hover
                 className={
                   location.pathname === '/' ? 'nav-item active' : 'nav-item'
                 }
@@ -27,6 +28,19 @@ class Navi extends React.Component {
                 </Link>
               </li>
               <li
+                data-hover
+                className={
+                  location.pathname === '/chi-siamo/'
+                    ? 'nav-item active'
+                    : 'nav-item'
+                }
+              >
+                <Link to="/chi-siamo/" className="nav-link">
+                  Chi Siamo
+                </Link>
+              </li>
+              <li
+                data-hover
                 className={
                   location.pathname === '/contact/'
                     ? 'nav-item active'

@@ -63,7 +63,7 @@ export default class Smooth {
 
   preload() {
     imagesLoaded(this.dom.content, (instance) => {
-      //this.setHeight()
+      //this.setHeight()audio
     })
   }
 

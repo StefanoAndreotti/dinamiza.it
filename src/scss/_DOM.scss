@@ -2,6 +2,7 @@ body,html{
   font-family: "Playfair Display";
   font-size: $size-p;
   line-height: em(23px,$size-p);
+  background-color: white;
 }
 
 h1{
@@ -72,4 +73,30 @@ h2{
 
 .no-padding{
   padding: 0;
+}
+
+.has-color-dinamiza{
+  color: $color-dinamiza;
+}
+.has-color-primary{
+  color: $color-primary;
+}
+.has-color-primary-negative{
+  color: $color-primary-negative;
+}
+.has-color-elements-dark{
+  color: $color-elements-dark;
+}
+.has-color-elements{
+  color: $color-elements;
+}
+
+.has-font-title{
+  font-family: 'Montserrat';
+}
+.has-font-element{
+  font-family: 'Lato';
+}
+.has-font-text{
+  font-family: 'Playfair Display';
 }

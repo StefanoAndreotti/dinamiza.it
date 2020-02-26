@@ -1,0 +1,30 @@
+.cursor{
+
+  mix-blend-mode: difference;
+
+  > div{
+    z-index: 9999;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+  }
+
+  [data-cursor-dot]{
+    width: 7px;
+    height: 7px;
+    background: #fff;
+  }
+
+  [data-cursor-circle]{
+    width: 21px;
+    height: 21px;
+    border: 1px solid #fff;
+  }
+
+}
+
+body{
+  cursor: none;
+}
