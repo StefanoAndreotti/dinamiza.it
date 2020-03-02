@@ -1,0 +1,56 @@
+.image {
+  position: relative;
+  overflow: hidden;
+
+  > div{
+    height: 100%;
+    animation: fadeIn 0s 0.4s;
+    animation-fill-mode: backwards;
+
+    > div{
+      height: 100%;
+    }
+
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #2E2E2F;
+    transform: translateX(-100%);
+    animation: secondaryImageOverlayIn 0.4s 0s, secondaryImageOverlayOut 0.4s 0.4s;
+    animation-fill-mode: both;
+  }
+
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes secondaryImageOverlayIn {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes secondaryImageOverlayOut {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

@@ -7,6 +7,7 @@ import Meta from 'components/meta'
 import style from 'scss/pages/contact.module.scss'
 import Form from "components/form";
 import Lines from "components/lines";
+import Image from "components/image";
 
 class Contact extends React.Component {
   render() {
@@ -68,7 +69,7 @@ class Contact extends React.Component {
         <div className={`is-overlap ${style.mainContainer}`}>
           <div className={'container-fluid no-padding'}>
             <div className={'offset-md-5 col-md-7 no-padding'}>
-              <div className={`is-background-center-cover ${style.mainContainer__image}`} style={{ backgroundImage: 'url(https://plh.fpp.li/1500x1500)' }}></div>
+              <Image url={'https://plh.fpp.li/1500x1500'} className={style.mainContainer__image} />
             </div>
           </div>
           <div className={'container'}>
