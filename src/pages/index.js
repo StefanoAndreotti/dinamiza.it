@@ -10,17 +10,16 @@ import Icon from 'components/icon'
 import HeaderHome from 'blocks/headerHome'
 
 import style from '../scss/pages/index.scss'
-import arrive from 'arrive'
 
 class Index extends React.Component {
+
+  componentDidMount() {
+    document.getElementsByTagName('body')[0].setAttribute('style','height: 100vh')
+  }
+
   render() {
 
     const { location, data } = this.props
-    document.arrive('.particles-container',{existing:true},function () {
-
-      document.getElementsByTagName('body')[0].setAttribute('style','height: 100vh')
-
-    });
 
     return (
       <div className={'page-home'}>
