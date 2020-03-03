@@ -69,6 +69,33 @@ class ChiSiamo extends React.Component {
 
         </div>
 
+        <div className={`${style.section2} is-overlap`}>
+
+          <div className={`container-fluid no-padding`}>
+            <div className={`row`}>
+              <div className={`col-md-5`}>
+
+                <Image url={'https://plh.fpp.li/501x500'} className={style.section2__image} />
+
+              </div>
+            </div>
+          </div>
+          <div className={`container`}>
+            <div className={`row`}>
+              <div className={`offset-md-6 col-md-6`}>
+                <div className={style.section2__content}>
+                  <span>Via B. Maderna, 7 | Mestre — Venezia | <a href={'mailto:info@dinamiza.it'}>info@dinamiza.it</a></span>
+                  <p><b>DINAMIZA</b> è parte di Starsoftware Group, azienda storica con una forte competenza tecnologica in ambito infrastruttura informatica, software per l'automazione e business intelligence.</p>
+                  <p>La mission del Gruppo Starsoftware è dotare il cliente di strumenti informatici e tecnologici innovativi che gli consentano di cogliere le opportunità attuali e di prepararsi ad affrontare le sfide del futuro.</p>
+                  <p>I diversi ambiti di business sono sviluppati da divisioni specialistiche dedicate che lavorano in modo integrato, unite dalla solidità e dalla vision strategica del gruppo.</p>
+                  <p>I vantaggi di questa integrazione sono la massima flessibilità e velocità nel corrispondere e soddisfare le esigenze del cliente.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </Layout>
     )
   }

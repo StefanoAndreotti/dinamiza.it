@@ -10,7 +10,6 @@ class Image extends React.Component {
   }
 
   componentDidMount() {
-
     const rect = this.imageRef.current.getBoundingClientRect()
     const image = parseInt(rect.top + document.body.scrollTop)
     const imageHeight = parseInt(this.imageRef.current.offsetHeight)

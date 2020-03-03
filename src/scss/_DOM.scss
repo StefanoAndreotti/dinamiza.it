@@ -18,6 +18,21 @@ h2{
 p{
   font-size: $size-p;
   line-height: em(23px, $size-p);
+
+  b{
+    font-family: "Lato";
+  }
+
+}
+
+a{
+  color: $color-dinamiza;
+
+  &:hover,&:active,&:focus{
+    color: $color-dinamiza;
+    text-decoration: underline;
+  }
+
 }
 
 .color-dinamiza{
