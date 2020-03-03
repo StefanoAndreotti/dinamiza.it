@@ -93,7 +93,27 @@ class ChiSiamo extends React.Component {
               </div>
             </div>
           </div>
+        </div>
 
+        <div className={style.section3}>
+          <div className={`container`}>
+            <div className={`row`}>
+              <div className={`col-md-5`}>
+                <div className={style.section3__content}>
+                  <img className={style.section3__logo} src='/img/logo_seon.svg' />
+                  <p><span className={style.section3__red}>SEON</span> è la divisione del Gruppo Starsoftware che presidia l’ambito ICT del cliente a 360 gradi attraverso la creazione di infrastrutture tecnologiche realizzate sulle reali esigenze delle PMI.</p>
+                  <a href={'https://seon.it/'} target={'_blank'}><img src='/img/icon_link.svg' />https://seon.it/</a>
+                </div>
+              </div>
+              <div className={`offset-md-2 col-md-5`}>
+                <div className={style.section3__content}>
+                  <img className={style.section3__logo} src='/img/logo_cylix.svg' />
+                  <p><span className={style.section3__black}>CYLIX</span> è la divisione del Gruppo Starsoftware dedicata alla creazione di soluzioni informatiche che mirano alla razionalizzazione e ottimizzazione dei processi interni alle PMI.</p>
+                  <a href={'https://cylix.it/'} target={'_blank'}><img src='/img/icon_link.svg' />https://cylix.it/</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
       </Layout>

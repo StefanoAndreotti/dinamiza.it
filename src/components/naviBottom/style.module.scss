@@ -6,6 +6,24 @@
   width: rem(71px);
   left: 0px;
   bottom: rem(80px);
+  mix-blend-mode: difference;
+
+  &:hover{
+    li:hover{
+      &:before{
+        content: "";
+        background-color: white;
+        width: 100%;
+        display: block;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0px;
+        z-index: 10;
+      }
+    }
+  }
+
 
   &__content{
 
@@ -32,15 +50,15 @@
           transform: rotate(90deg);
 
           > a{
-
-
             color: #c1c1c1;
             font-size: 19px;
             transition: .2s;
+            mix-blend-mode: difference;
 
             &:hover{
               color: $color-dinamiza;
               text-decoration: none;
+              mix-blend-mode: unset;
             }
 
           }
@@ -59,3 +77,4 @@
   }
 
 }
+

@@ -87,6 +87,11 @@
 
   height: rem(600px);
 
+  span{
+    display: block;
+    padding-bottom: rem(40px);
+  }
+
 
   > div{
     height: 100%;
@@ -106,6 +111,43 @@
     position: relative;
     height: rem(600px);
     margin-top: rem(-70px);
+
+  }
+
+}
+
+.section3{
+
+  display: block;
+  margin-top: rem(60px);
+  padding-bottom: rem(150px);
+
+  p{
+    color: #666666;
+  }
+
+  &__red{
+    color: $color-dinamiza;
+  }
+
+  &__black{
+    color: $color-primary;
+  }
+
+  &__logo{
+    width: rem(118px);
+    height: auto;
+    margin-bottom: rem(40px);
+  }
+
+  a{
+    display: block;
+    color: $color-primary;
+    margin-top: rem(60px);
+
+    > img{
+      margin-right: rem(15px);
+    }
 
   }
 
