@@ -65,9 +65,9 @@ export default class Particles {
 
 		const uniforms = {
 			uTime: { value: 0 },
-			uRandom: { value: 1.0 },
-			uDepth: { value: 2.0 },
-			uSize: { value: 0.0 },
+			uRandom: { value: -1.15 },
+			uDepth: { value: -3.44 },
+			uSize: { value: -0.84 },
 			uTextureSize: { value: new THREE.Vector2(this.width, this.height) },
 			uTexture: { value: this.texture },
 			uTouch: { value: null },
@@ -171,9 +171,9 @@ export default class Particles {
 
 	show(time = 1.0) {
 		// reset
-		TweenLite.fromTo(this.object3D.material.uniforms.uSize, time, { value: 0.5 }, { value: 1.5 });
-		TweenLite.to(this.object3D.material.uniforms.uRandom, time, { value: 2.0 });
-		TweenLite.fromTo(this.object3D.material.uniforms.uDepth, time * 1.5, { value: 40.0 }, { value: 4.0 });
+		TweenLite.fromTo(this.object3D.material.uniforms.uSize, time, { value: 0 }, { value: 0.8 });
+		TweenLite.to(this.object3D.material.uniforms.uRandom, time, { value: 1.15 });
+		TweenLite.fromTo(this.object3D.material.uniforms.uDepth, time * 1.2, { value: -20.0 }, { value: 0.0 });
 
 		this.addListeners();
 	}

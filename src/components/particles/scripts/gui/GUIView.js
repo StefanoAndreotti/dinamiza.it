@@ -7,9 +7,9 @@ export default class GUIView {
 		this.app = app;
 
 		this.particlesHitArea = false;
-		this.particlesRandom = 0.69;
-		this.particlesDepth = 5.11;
-		this.particlesSize = 1.3;
+		this.particlesRandom = -1.15;
+		this.particlesDepth = -3.44;
+		this.particlesSize = -0.84;
 
 		this.touchRadius = 0.30;
 
@@ -27,7 +27,7 @@ export default class GUIView {
 
 	initControlKit() {
 		this.controlKit = new ControlKit();
-		this.controlKit.addPanel({ width: 300, enable: false })
+		this.controlKit.addPanel({ width: 300, enable: true })
 
 		.addGroup({label: 'Touch', enable: true })
 		.addCanvas({ label: 'trail', height: 64 })

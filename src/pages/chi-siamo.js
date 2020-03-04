@@ -84,7 +84,7 @@ class ChiSiamo extends React.Component {
             <div className={`row`}>
               <div className={`offset-md-6 col-md-6`}>
                 <div className={style.section2__content}>
-                  <span>Via B. Maderna, 7 | Mestre — Venezia | <a href={'mailto:info@dinamiza.it'}>info@dinamiza.it</a></span>
+                  <span>Via B. Maderna, 7 | Mestre — Venezia | <a data-hover="true" href={'mailto:info@dinamiza.it'}>info@dinamiza.it</a></span>
                   <p><b>DINAMIZA</b> è parte di Starsoftware Group, azienda storica con una forte competenza tecnologica in ambito infrastruttura informatica, software per l'automazione e business intelligence.</p>
                   <p>La mission del Gruppo Starsoftware è dotare il cliente di strumenti informatici e tecnologici innovativi che gli consentano di cogliere le opportunità attuali e di prepararsi ad affrontare le sfide del futuro.</p>
                   <p>I diversi ambiti di business sono sviluppati da divisioni specialistiche dedicate che lavorano in modo integrato, unite dalla solidità e dalla vision strategica del gruppo.</p>
@@ -102,14 +102,14 @@ class ChiSiamo extends React.Component {
                 <div className={style.section3__content}>
                   <img className={style.section3__logo} src='/img/logo_seon.svg' />
                   <p><span className={style.section3__red}>SEON</span> è la divisione del Gruppo Starsoftware che presidia l’ambito ICT del cliente a 360 gradi attraverso la creazione di infrastrutture tecnologiche realizzate sulle reali esigenze delle PMI.</p>
-                  <a href={'https://seon.it/'} target={'_blank'}><img src='/img/icon_link.svg' />https://seon.it/</a>
+                  <a href={'https://seon.it/'} data-hover="true" target={'_blank'}><img src='/img/icon_link.svg' />https://seon.it/</a>
                 </div>
               </div>
               <div className={`offset-md-2 col-md-5`}>
                 <div className={style.section3__content}>
                   <img className={style.section3__logo} src='/img/logo_cylix.svg' />
                   <p><span className={style.section3__black}>CYLIX</span> è la divisione del Gruppo Starsoftware dedicata alla creazione di soluzioni informatiche che mirano alla razionalizzazione e ottimizzazione dei processi interni alle PMI.</p>
-                  <a href={'https://cylix.it/'} target={'_blank'}><img src='/img/icon_link.svg' />https://cylix.it/</a>
+                  <a href={'https://cylix.it/'} data-hover="true" target={'_blank'}><img src='/img/icon_link.svg' />https://cylix.it/</a>
                 </div>
               </div>
             </div>

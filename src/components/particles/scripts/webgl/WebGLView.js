@@ -14,6 +14,7 @@ export default class WebGLView {
 		this.samples = [
 			'img/particles/smartphone.png',
 			'img/particles/diletta.png',
+			'img/particles/headline.png',
 		];
 
 		this.initThree();
