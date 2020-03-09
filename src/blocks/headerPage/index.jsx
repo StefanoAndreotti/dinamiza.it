@@ -25,7 +25,7 @@ class HeaderPage extends React.Component {
     const tags = []
 
     for (const [index, value] of data.tags.entries()) {
-      tags.push(<li>{value}</li>)
+      tags.push(<li key={index}>{value}</li>)
     }
 
     return (
