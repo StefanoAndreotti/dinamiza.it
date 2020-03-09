@@ -58,6 +58,11 @@ a{
     position: absolute;
     top: 0;
 
+    &.is-align-center{
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
     @include media-breakpoint-down(sm){
       position: relative;
     }
