@@ -78,6 +78,31 @@ class Pathlog extends React.Component {
             </div>
           </div>
 
+          <div className={`is-overlap ${style.section3}`}>
+
+            <div className={`container-fluid`}>
+              <div className={`row`}>
+                <div className={`offset-md-5 col-md-6 d-flex justify-content-end`}>
+                  <img src={`https://plh.fpp.li/800x500`} />
+                </div>
+              </div>
+            </div>
+
+            <div className={`container d-flex align-items-center`}>
+              <div className={`row`}>
+
+                <div className={`col-md-5`}>
+
+                  <ParagraphLine>
+                    <h2 data-title className={`has-color-primary-negative`}>Prototipazione interfaccia, e Analisi Funzionalità</h2>
+                    <p className={`has-color-primary-negative`}>L'aspetto grafico di un sistema di gestione delle spedizioni non è stato meno importante delle componenti tecniche. Abbiamo cercato di togliere per semplificare, adottando uno stile pulito e minimale.</p>
+                  </ParagraphLine>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
         </Layout>
       </div>
     )
