@@ -1,6 +1,5 @@
 import React from 'react'
 import style from './style.module.scss'
-import ParagraphLine from 'components/paragraphLine'
 
 class SectionTextImageContainer extends React.Component{
 

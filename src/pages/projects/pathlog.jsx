@@ -12,49 +12,9 @@ import SectionHalfImage from 'blocks/case/sectionHalfImage'
 import SectionTextImageLeft from 'blocks/case/sectionTextImageLeft'
 import SectionTextImageRight from 'blocks/case/sectionTextImageRight'
 import SectionTextImageContainer from 'blocks/case/sectionTextImageContainer'
+import SectionSlider from 'blocks/case/sectionSlider'
 
 class Pathlog extends React.Component {
-
-  constructor() {
-    super()
-    this.counterSlider = React.createRef()
-  }
-
-  componentDidMount() {
-
-    const counterSlider = this.counterSlider.current
-
-    const slider = new Swiper('.swiper-container', {
-      slidesPerView: 'auto',
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-
-    slider.on('slideChange', function () {
-      counterSlider.innerHTML = ((slider.activeIndex < 10) ? ('0' + (slider.activeIndex + 1)) : (slider.activeIndex + 1))
-    });
-
-  }
-
-  componentDidUpdate() {
-
-    const counterSlider = this.counterSlider.current
-
-    const slider = new Swiper('.swiper-container', {
-      slidesPerView: 'auto',
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-
-    slider.on('slideChange', function () {
-      counterSlider.innerHTML = ((slider.activeIndex < 10) ? ('0' + (slider.activeIndex + 1)) : (slider.activeIndex + 1))
-    });
-
-  }
 
   render() {
 
@@ -68,6 +28,8 @@ class Pathlog extends React.Component {
       title: "Il sistema più innovativo per assegnare le spedizioni",
       tags: ["UI-UX DESIGN","BRAND IDENTITY","PROJECT MANAGEMENT","SOFTWARE ARCHITECT","SYSTEM INTEGRATION","PROGRAMMAZIONE"]
     }
+
+    const slideImages = ['https://plh.fpp.li/800x501', 'https://plh.fpp.li/800x502', 'https://plh.fpp.li/800x503', 'https://plh.fpp.li/800x504', 'https://plh.fpp.li/800x505', 'https://plh.fpp.li/800x506']
 
     return (
       <div className={'page-home'}>
@@ -106,7 +68,6 @@ class Pathlog extends React.Component {
               </ParagraphLine>
             </SectionTextImageRight>
 
-
             <SectionTextImageContainer textPosition={'left'}>
               <ParagraphLine>
                 <h2 data-title className={`has-color-primary-negative`}>Brand identity</h2>
@@ -114,55 +75,10 @@ class Pathlog extends React.Component {
               </ParagraphLine>
             </SectionTextImageContainer>
 
-            <div className={`${style.section__dark__block_slider}`}>
-
-              <div className="swiper-container">
-                <div className="swiper-wrapper">
-                  <div className={`swiper-slide ${style.section__dark__block_slider__slide}`}>
-                    <div className={`${style.section__dark__block_slider__slide__content}`}></div>
-                  </div>
-                  <div className={`swiper-slide ${style.section__dark__block_slider__slide}`}>
-                    <div className={`${style.section__dark__block_slider__slide__content}`}></div>
-                  </div>
-                  <div className={`swiper-slide ${style.section__dark__block_slider__slide}`}>
-                    <div className={`${style.section__dark__block_slider__slide__content}`}></div>
-                  </div>
-                  <div className={`swiper-slide ${style.section__dark__block_slider__slide}`}>
-                    <div className={`${style.section__dark__block_slider__slide__content}`}></div>
-                  </div>
-                  <div className={`swiper-slide ${style.section__dark__block_slider__slide}`}>
-                    <div className={`${style.section__dark__block_slider__slide__content}`}></div>
-                  </div>
-                  <div className={`swiper-slide ${style.section__dark__block_slider__slide}`}>
-                    <div className={`${style.section__dark__block_slider__slide__content}`}></div>
-                  </div>
-                </div>
-              </div>
-
-              <div className={`${style.section__dark__block_slider__content_text}`}>
-                <div className={`contaienr-fluid`}>
-                  <div className={`row`}>
-                    <div className={`offset-md-7 col-md-3`}>
-                      <h2 className={`has-color-primary-negative`}>Risultati</h2>
-                      <p className={`has-color-primary-negative`}>Il sistema creato ha generato interesse tra domanda-offerta, la facilità d'uso ne ha permesso l'adozione contribuendo così ad aumentare l'efficienza della supply chain aziendale e il business dei trasportatori.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className={`${style.section__dark__block_slider__counter}`}>
-                <div className={`contaienr-fluid`}>
-                  <div className={`row`}>
-                    <div className={`offset-md-9 col-md-2`}>
-
-                      <span ref={this.counterSlider}>01</span>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
+            <SectionSlider slidesData={slideImages}>
+              <h2 className={`has-color-primary-negative`}>Risultati</h2>
+              <p className={`has-color-primary-negative`}>Il sistema creato ha generato interesse tra domanda-offerta, la facilità d'uso ne ha permesso l'adozione contribuendo così ad aumentare l'efficienza della supply chain aziendale e il business dei trasportatori.</p>
+            </SectionSlider>
 
           </div>
 
