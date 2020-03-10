@@ -63,11 +63,25 @@
     bottom: 0px;
     transform: translateY(-50%);
 
-    span{
+    &__total{
+      position: relative;
       font-family: 'Lato';
-      font-size: 200px;
+      font-size: rem(200px);
       font-weight: bold;
       color: $color-dinamiza;
+      z-index: 2;
+    }
+
+    &__relative{
+      font-family: 'Lato';
+      font-size: rem(100px);
+      font-weight: bold;
+      color: $color-elements;
+      opacity: .2;
+      position: absolute;
+      right: -.3em;
+      top: -.7em;
+      z-index: 1;
     }
 
   }

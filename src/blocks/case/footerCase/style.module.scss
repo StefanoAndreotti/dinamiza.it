@@ -1,0 +1,127 @@
+@import "scss/common";
+
+.section{
+
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+  background: $color-primary-negative;
+  z-index: 6;
+
+  &:before{
+    content: "";
+    display: block;
+    background-color: $color-primary-negative;
+    width: rem(150px);
+    max-width: calc(150px);
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .7s;
+  }
+
+  &__logoContainer{
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 0;
+    min-height: rem(225px);
+    transition: .7s ease-out;
+    transition-delay: .7s;
+    max-width: rem(175px);
+    z-index: 5;
+
+    > img{
+      margin: rem(25px);
+      width: rem(125px);
+    }
+
+  }
+
+  h4{
+    font-family: 'Montserrat';
+    font-size: 60px;
+    font-weight: bold;
+  }
+
+  &__linkProjects{
+
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    top: 50%;
+    padding: rem(0 45px);
+    transform: translateY(calc(-50% - 170px));
+
+    > a{
+      >div{
+
+        display: inline-block;
+
+        span{
+          display: block;
+          font-family: 'Lato';
+          font-weight: bold;
+          font-size: 13px;
+          line-height: 1.3em;
+
+          &:first-child{
+            color: #9a9a9a;
+          }
+
+        }
+      }
+    }
+
+    &__prev{
+
+      > div{
+        margin-left: rem(25px);
+      }
+
+      &:before{
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-image: url('/img/arrow.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+    }
+    &__next{
+
+      > div{
+        margin-right: rem(25px);
+      }
+
+      &:after{
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-image: url('/img/arrow.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: rotate(180deg);
+      }
+
+    }
+
+    &__link{}
+
+  }
+
+}

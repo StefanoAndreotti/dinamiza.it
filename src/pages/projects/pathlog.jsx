@@ -1,5 +1,4 @@
 import React from 'react'
-import Swiper from 'swiper';
 import { siteMetadata } from '../../../gatsby-config'
 import Layout from "components/layout";
 import Meta from "components/meta";
@@ -13,6 +12,9 @@ import SectionTextImageLeft from 'blocks/case/sectionTextImageLeft'
 import SectionTextImageRight from 'blocks/case/sectionTextImageRight'
 import SectionTextImageContainer from 'blocks/case/sectionTextImageContainer'
 import SectionSlider from 'blocks/case/sectionSlider'
+import FooterCase from 'blocks/case/footerCase'
+import SectionHeadingFullWidth from 'blocks/case/sectionHeadingFullWidth'
+import Dinamiza from 'components/colorDinamiza'
 
 class Pathlog extends React.Component {
 
@@ -42,6 +44,36 @@ class Pathlog extends React.Component {
             <h2>Il SaaS innovativo che rivoluziona la <span className={`color-dinamiza`}>supply chain</span></h2>
             <p>Ideato insieme a Click Logistic, Pathlog nasce come sistema ERP smart per assegnare le spedizioni.<br />L'utilizzo della piattaforma da parte di trasportatori e aziende ha permesso la creazione di un vero e proprio network, dove è possibile non solo consentire una gestione snella, bensì far incontrare domanda e offerta.</p>
           </SectionHalfIntroduction>
+
+          <SectionTextImageContainer textPosition={'left'} >
+            <ParagraphLine>
+              <h2 data-title >Brand identity</h2>
+              <p>Partendo dalle tre domande chiave per definire l'identità aziendale, è stata identificata la linea grafica per la comunicazione online. I colori utilizzati comunicano innovazione e fiducia, entrambi valori emersi dalla strategia aziendale. I punti e le linee inseriti nella P simboleggiano la mission aziendale: mettere in contatto domanda - offerta, gestendo la spedizione in tutte le sue fasi.</p>
+              <ul>
+                <li>Richiesta carte carburante</li>
+                <li>Richiesta carte carburante</li>
+                <li>Richiesta carte carburante</li>
+                <li>Richiesta carte carburante</li>
+              </ul>
+            </ParagraphLine>
+          </SectionTextImageContainer>
+
+          <SectionTextImageContainer textPosition={'right'} >
+            <div>
+              <h2 data-title >Brand identity</h2>
+              <p>Partendo dalle tre domande chiave per definire l'identità aziendale, è stata identificata la linea grafica per la comunicazione online. I colori utilizzati comunicano innovazione e fiducia, entrambi valori emersi dalla strategia aziendale. I punti e le linee inseriti nella P simboleggiano la mission aziendale: mettere in contatto domanda - offerta, gestendo la spedizione in tutte le sue fasi.</p>
+              <ul>
+                <li>Richiesta carte carburante</li>
+                <li>Richiesta carte carburante</li>
+                <li>Richiesta carte carburante</li>
+                <li>Richiesta carte carburante</li>
+              </ul>
+            </div>
+          </SectionTextImageContainer>
+
+          <SectionHeadingFullWidth>
+            <h3>Service Design e UX per <Dinamiza>amplificare l'esperienza utente</Dinamiza>.</h3>
+          </SectionHeadingFullWidth>
 
           <SectionHalfImage>
             <ParagraphLine>
@@ -81,6 +113,8 @@ class Pathlog extends React.Component {
             </SectionSlider>
 
           </div>
+
+          <FooterCase />
 
 
         </Layout>

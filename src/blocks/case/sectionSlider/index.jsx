@@ -6,14 +6,18 @@ class SectionSlider extends React.Component{
 
   constructor() {
     super()
+    this.slider = React.createRef()
     this.counterSlider = React.createRef()
+    this.counterTotalSlider = React.createRef()
   }
 
   componentDidMount() {
 
+    const sliderElem = this.slider.current
     const counterSlider = this.counterSlider.current
+    const counterTotalSlider = this.counterTotalSlider.current
 
-    const slider = new Swiper('.swiper-container', {
+    const slider = new Swiper(sliderElem, {
       slidesPerView: 'auto',
       pagination: {
         el: '.swiper-pagination',
@@ -24,14 +28,18 @@ class SectionSlider extends React.Component{
     slider.on('slideChange', function () {
       counterSlider.innerHTML = ((slider.activeIndex < 10) ? ('0' + (slider.activeIndex + 1)) : (slider.activeIndex + 1))
     });
+
+    counterTotalSlider.innerHTML = ((slider.slides.length < 10) ? ('0' + (slider.slides.length - 1)) : (slider.slides.length - 1))
 
   }
 
   componentDidUpdate() {
 
+    const sliderElem = this.slider.current
     const counterSlider = this.counterSlider.current
+    const counterTotalSlider = this.counterTotalSlider.current
 
-    const slider = new Swiper('.swiper-container', {
+    const slider = new Swiper(sliderElem, {
       slidesPerView: 'auto',
       pagination: {
         el: '.swiper-pagination',
@@ -42,6 +50,8 @@ class SectionSlider extends React.Component{
     slider.on('slideChange', function () {
       counterSlider.innerHTML = ((slider.activeIndex < 10) ? ('0' + (slider.activeIndex + 1)) : (slider.activeIndex + 1))
     });
+
+    counterTotalSlider.innerHTML = ((slider.slides.length < 10) ? ('0' + (slider.slides.length - 1)) : (slider.slides.length - 1))
 
   }
 
@@ -64,7 +74,7 @@ class SectionSlider extends React.Component{
 
       <div className={`${style.section}`}>
 
-        <div className="swiper-container">
+        <div ref={this.slider} className="swiper-container">
           <div className="swiper-wrapper">
 
             {slides}
@@ -93,7 +103,8 @@ class SectionSlider extends React.Component{
             <div className={`row`}>
               <div className={`offset-md-9 col-md-2`}>
 
-                <span ref={this.counterSlider}>01</span>
+                <span className={`${style.section__counter__relative}`} ref={this.counterTotalSlider}>01</span>
+                <span className={`${style.section__counter__total}`} ref={this.counterSlider}>01</span>
 
               </div>
             </div>

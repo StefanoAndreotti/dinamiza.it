@@ -10,6 +10,10 @@ body{
 .cursor{
 
   mix-blend-mode: difference;
+  z-index: 9998;
+  position: absolute;
+  top: 0;
+  left: 0;
 
   > div{
     z-index: 9999;
@@ -24,12 +28,14 @@ body{
     width: 7px;
     height: 7px;
     background: #fff;
+    z-index: 99;
   }
 
   [data-cursor-circle]{
     width: 21px;
     height: 21px;
     border: 1px solid #fff;
+    z-index: 99;
   }
 
 }

@@ -16,6 +16,31 @@
       margin-bottom: rem(30px);
     }
 
+    ul{
+
+      margin: rem(45px 0);
+
+      li{
+        font-family: 'Lato';
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: rem(15px);
+
+        &:before{
+          content: '';
+          display: inline-block;
+          background-color: $color-dinamiza;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          vertical-align: top;
+          margin-top: .45em;
+          margin-right: rem(30px);
+        }
+
+      }
+    }
+
   }
 
 }
