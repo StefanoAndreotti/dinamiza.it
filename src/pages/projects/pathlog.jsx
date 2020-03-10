@@ -175,7 +175,16 @@ class Pathlog extends React.Component {
                 </div>
               </div>
 
-              <div className={`content-text`}> </div>
+              <div className={`${style.section__dark__block_slider__content_text}`}>
+                <div className={`contaienr-fluid`}>
+                  <div className={`row`}>
+                    <div className={`offset-md-7 col-md-3`}>
+                      <h2 className={`has-color-primary-negative`}>Risultati</h2>
+                      <p className={`has-color-primary-negative`}>Il sistema creato ha generato interesse tra domanda-offerta, la facilità d'uso ne ha permesso l'adozione contribuendo così ad aumentare l'efficienza della supply chain aziendale e il business dei trasportatori.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
             </div>
 
