@@ -4,7 +4,7 @@ import style from './style.module.scss'
 import Lines from 'components/lines'
 import ParagraphLine from 'components/paragraphLine'
 
-class HeaderPage extends React.Component {
+class HeaderCase extends React.Component {
   constructor() {
     super()
     this.headerRef = React.createRef()
@@ -15,8 +15,8 @@ class HeaderPage extends React.Component {
     const element = this.headerRef.current
     const logo = this.logoRef.current
     setTimeout(function() {
-      element.classList.add(style.headerPage__opened)
-      logo.classList.add(style.headerPage__logoContainer__opened)
+      element.classList.add(style.headerCase__opened)
+      logo.classList.add(style.headerCase__logoContainer__opened)
     }, 200)
   }
 
@@ -31,25 +31,25 @@ class HeaderPage extends React.Component {
     return (
       <div
         ref={this.headerRef}
-        className={style.headerPage}
+        className={style.headerCase}
         style={{ backgroundImage: `url(${data.image})` }}
       >
         <Lines />
         <div className={`container`}>
           <div className={`row`}>
             <div className={`col-md-10`}>
-              <div className={style.headerPage__dataContainer}>
+              <div className={style.headerCase__dataContainer}>
                 <ParagraphLine>
                   <label data-title>Data:</label>
                   <span>{data.data}</span>
                 </ParagraphLine>
               </div>
-              <div className={style.headerPage__titleContainer}>
+              <div className={style.headerCase__titleContainer}>
                 <h1>{data.title}</h1>
               </div>
             </div>
           </div>
-          <div className={style.headerPage__tagsContainer}>
+          <div className={style.headerCase__tagsContainer}>
             <ParagraphLine>
               <ul data-title>{tags}</ul>
             </ParagraphLine>
@@ -58,7 +58,7 @@ class HeaderPage extends React.Component {
 
         <div
           ref={this.logoRef}
-          className={style.headerPage__logoContainer}
+          className={style.headerCase__logoContainer}
           style={{ backgroundColor: data.color }}
         >
           <img className={`animated fadeInUp delay-2s`} src={data.logoUrl} />
@@ -68,4 +68,4 @@ class HeaderPage extends React.Component {
   }
 }
 
-export default HeaderPage
+export default HeaderCase

@@ -1,0 +1,21 @@
+@import "scss/common";
+
+.section{
+
+  position: relative;
+  display: block;
+  overflow: auto;
+  padding-top: rem(100px);
+  padding-bottom: rem(100px);
+
+  &__content_text{
+
+    margin: rem(170px 0);
+
+    h2{
+      margin-bottom: rem(30px);
+    }
+
+  }
+
+}
