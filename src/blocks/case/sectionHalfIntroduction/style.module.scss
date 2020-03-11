@@ -5,10 +5,13 @@
   position: relative;
   padding: rem(200px 0 150px);
 
-  h2{
+  h2,h3,h4,h5{
+    font-family: 'Montserrat';
+    font-size: rem(35px);
+    line-height: em(45px,35px);
     max-width: rem(430px);
   }
-  
+
   ul{
 
     margin: rem(45px 0);

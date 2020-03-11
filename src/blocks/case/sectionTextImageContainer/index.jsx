@@ -15,7 +15,9 @@ class SectionTextImageContainer extends React.Component{
               {children.length > 1 ? children[0] : children}
             </div>
           </div>
-          <div className={`col-md-6 ${ (textPosition == "right") ? 'order-1' : '' }`}></div>
+          <div className={`col-md-6 ${ (textPosition == "right") ? 'order-1' : '' }`}>
+            {children[1]}
+          </div>
         </div>
       </div>
     )

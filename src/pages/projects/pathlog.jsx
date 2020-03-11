@@ -15,6 +15,7 @@ import SectionSlider from 'blocks/case/sectionSlider'
 import FooterCase from 'blocks/case/footerCase'
 import SectionHeadingFullWidth from 'blocks/case/sectionHeadingFullWidth'
 import Dinamiza from 'components/colorDinamiza'
+import SectionDark from 'components/sectionDark'
 
 class Pathlog extends React.Component {
 
@@ -82,7 +83,7 @@ class Pathlog extends React.Component {
             </ParagraphLine>
           </SectionHalfImage>
 
-          <div className={style.section__dark}>
+          <SectionDark imageSrc={'https://plh.fpp.li/800x501'} imagePosition={'bottom'}>
 
             <SectionTextImageLeft>
               <Image url={'https://plh.fpp.li/800x500'} className={style.section__dark__firstImage} />
@@ -112,10 +113,9 @@ class Pathlog extends React.Component {
               <p className={`has-color-primary-negative`}>Il sistema creato ha generato interesse tra domanda-offerta, la facilità d'uso ne ha permesso l'adozione contribuendo così ad aumentare l'efficienza della supply chain aziendale e il business dei trasportatori.</p>
             </SectionSlider>
 
-          </div>
+          </SectionDark>
 
           <FooterCase />
-
 
         </Layout>
       </div>

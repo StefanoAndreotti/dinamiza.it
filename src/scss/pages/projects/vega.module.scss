@@ -1,0 +1,15 @@
+@import "scss/common";
+
+.page{
+
+  &__firstImage{
+    width: 100%;
+    height: rem(550px);
+    position: relative;
+  }
+
+  &__thirdContent{
+    padding-left: rem(130px);
+  }
+
+}
