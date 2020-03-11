@@ -7,8 +7,9 @@
   overflow: auto;
   margin-top: rem(100px);
   margin-bottom: rem(100px);
+  overflow-y: hidden;
 
-  [data-fadeout]{
+  [data-fadeout='true']{
     &:before{
       content: '';
       display: block;

@@ -11,8 +11,9 @@ import ParagraphLine from 'components/paragraphLine'
 import Image from 'components/image'
 import style from 'scss/pages/projects/vega.module.scss'
 import SectionDark from 'components/sectionDark'
-import SectionTextImageLeft from 'blocks/case/sectionTextImageLeft'
-import SectionTextImageRight from 'blocks/case/sectionTextImageRight'
+import SectionTextImageFullWidth from 'blocks/case/sectionTextImageFullWidth'
+import SectionSlider from 'blocks/case/sectionSlider'
+import FooterCase from 'blocks/case/footerCase'
 
 class Vega extends React.Component {
 
@@ -28,6 +29,8 @@ class Vega extends React.Component {
       title: "MyVEGA Una piattaforma user friendly integrata per un servizio clienti da STAR",
       tags: ["UI-UX DESIGN","BRAND IDENTITY","PROJECT MANAGEMENT","SOFTWARE ARCHITECT","SYSTEM INTEGRATION","PROGRAMMAZIONE"]
     }
+
+    const slideImages = ['https://plh.fpp.li/800x501', 'https://plh.fpp.li/800x502', 'https://plh.fpp.li/800x503', 'https://plh.fpp.li/800x504', 'https://plh.fpp.li/800x505', 'https://plh.fpp.li/800x506']
 
     return(
       <div className={'page-home'}>
@@ -80,21 +83,31 @@ class Vega extends React.Component {
           </SectionTextImageContainer>
 
           <SectionDark imageSrc={'https://plh.fpp.li/800x501'} imagePosition={'top'}>
-            <SectionTextImageRight>
+
+            <SectionTextImageFullWidth textPosition={'left'} padding={true} imageFade={false}>
               <Image url={'https://plh.fpp.li/800x500'} className={style.page__firstImage} />
               <ParagraphLine>
                 <h2 data-title className={`has-color-primary-negative`}>System Integration</h2>
                 <p className={`has-color-primary-negative`}>Quando introduciamo nuovi spazi digitali ci occupiamo anche della parte di integrazione con i sistemi di gestione esistenti. Nel caso di My VEGA è stata studiata una integrazione con il gestionale SAP attingendo ai dati necessari per elaborare la fatturazione tramite codice scontrino, in maniera efficiente e immediata sia lato utente che lato amministrativo.</p>
               </ParagraphLine>
-            </SectionTextImageRight>
-            <SectionTextImageRight>
+            </SectionTextImageFullWidth>
+
+            <SectionTextImageFullWidth textPosition={'left'} padding={false} imageFade={true}>
               <Image url={'https://plh.fpp.li/800x500'} className={style.page__firstImage} />
               <ParagraphLine>
                 <h2 data-title className={`has-color-primary-negative`}>System Integration</h2>
                 <p className={`has-color-primary-negative`}>Quando introduciamo nuovi spazi digitali ci occupiamo anche della parte di integrazione con i sistemi di gestione esistenti. Nel caso di My VEGA è stata studiata una integrazione con il gestionale SAP attingendo ai dati necessari per elaborare la fatturazione tramite codice scontrino, in maniera efficiente e immediata sia lato utente che lato amministrativo.</p>
               </ParagraphLine>
-            </SectionTextImageRight>
+            </SectionTextImageFullWidth>
+
+            <SectionSlider slidesData={slideImages}>
+              <h2 className={`has-color-primary-negative`}>Risultati</h2>
+              <p className={`has-color-primary-negative`}>Il design segue la filosofia aziendale di offrire al cliente “Un rifornimento da Star!” portando avanti i valori unicità, passione, accoglienza erano le parole chiave del concept. Non solo un sito con contenuti istituzionali ma uno spazio User friendly dove ricerca grafica, soluzioni UX e interattività si fondono per creare il mondo VEGA.</p>
+            </SectionSlider>
+
           </SectionDark>
+
+          <FooterCase />
 
         </Layout>
       </div>

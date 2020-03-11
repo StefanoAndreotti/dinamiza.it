@@ -8,8 +8,7 @@ import ParagraphLine from "components/paragraphLine";
 import Image from 'components/image'
 import SectionHalfIntroduction from 'blocks/case/sectionHalfIntroduction'
 import SectionHalfImage from 'blocks/case/sectionHalfImage'
-import SectionTextImageLeft from 'blocks/case/sectionTextImageLeft'
-import SectionTextImageRight from 'blocks/case/sectionTextImageRight'
+import SectionTextImageFullWidth from 'blocks/case/sectionTextImageFullWidth'
 import SectionTextImageContainer from 'blocks/case/sectionTextImageContainer'
 import SectionSlider from 'blocks/case/sectionSlider'
 import FooterCase from 'blocks/case/footerCase'
@@ -85,21 +84,21 @@ class Pathlog extends React.Component {
 
           <SectionDark imageSrc={'https://plh.fpp.li/800x501'} imagePosition={'bottom'}>
 
-            <SectionTextImageLeft>
+            <SectionTextImageFullWidth textPosition={'right'} padding={true} imageFade={false}>
               <Image url={'https://plh.fpp.li/800x500'} className={style.section__dark__firstImage} />
               <ParagraphLine>
                 <h2 data-title className={`has-color-primary-negative`}>Prototipazione interfaccia, e Analisi Funzionalità</h2>
                 <p className={`has-color-primary-negative`}>L'aspetto grafico di un sistema di gestione delle spedizioni non è stato meno importante delle componenti tecniche. Abbiamo cercato di togliere per semplificare, adottando uno stile pulito e minimale.</p>
               </ParagraphLine>
-            </SectionTextImageLeft>
+            </SectionTextImageFullWidth>
 
-            <SectionTextImageRight>
+            <SectionTextImageFullWidth textPosition={'left'} padding={false} imageFade={true}>
               <Image url={'https://plh.fpp.li/800x500'} className={style.section__dark__firstImage} />
               <ParagraphLine>
                 <h2 data-title className={`has-color-primary-negative`}>Prototipazione interfaccia, e Analisi Funzionalità</h2>
                 <p className={`has-color-primary-negative`}>L'aspetto grafico di un sistema di gestione delle spedizioni non è stato meno importante delle componenti tecniche. Abbiamo cercato di togliere per semplificare, adottando uno stile pulito e minimale.</p>
               </ParagraphLine>
-            </SectionTextImageRight>
+            </SectionTextImageFullWidth>
 
             <SectionTextImageContainer textPosition={'left'}>
               <ParagraphLine>
