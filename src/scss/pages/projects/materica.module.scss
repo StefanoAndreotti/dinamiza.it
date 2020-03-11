@@ -1,0 +1,13 @@
+@import "scss/common";
+
+.page{
+
+
+  &__secondImage{
+    > img{
+      max-height: rem(550px);
+      margin: auto;
+    }
+  }
+
+}

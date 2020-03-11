@@ -33,7 +33,7 @@ class Vega extends React.Component {
     const slideImages = ['https://plh.fpp.li/800x501', 'https://plh.fpp.li/800x502', 'https://plh.fpp.li/800x503', 'https://plh.fpp.li/800x504', 'https://plh.fpp.li/800x505', 'https://plh.fpp.li/800x506']
 
     return(
-      <div className={'page-home'}>
+      <div>
         <Layout location={location}>
           <Meta site={siteMetadata} title="Vega" />
 
@@ -92,8 +92,10 @@ class Vega extends React.Component {
               </ParagraphLine>
             </SectionTextImageFullWidth>
 
-            <SectionTextImageFullWidth textPosition={'left'} padding={false} imageFade={true}>
-              <Image url={'https://plh.fpp.li/800x500'} className={style.page__firstImage} />
+            <SectionTextImageFullWidth textPosition={'left'} padding={false} imageFade={false}>
+              <div className={style.page__secondImage}>
+                <img src={'https://pngimage.net/wp-content/uploads/2018/06/png-2-10.png'} />
+              </div>
               <ParagraphLine>
                 <h2 data-title className={`has-color-primary-negative`}>System Integration</h2>
                 <p className={`has-color-primary-negative`}>Quando introduciamo nuovi spazi digitali ci occupiamo anche della parte di integrazione con i sistemi di gestione esistenti. Nel caso di My VEGA è stata studiata una integrazione con il gestionale SAP attingendo ai dati necessari per elaborare la fatturazione tramite codice scontrino, in maniera efficiente e immediata sia lato utente che lato amministrativo.</p>

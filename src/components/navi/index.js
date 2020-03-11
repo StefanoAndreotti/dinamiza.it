@@ -1,28 +1,44 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import style from'./style.module.scss'
+import style from './style.module.scss'
 
 class Navi extends React.Component {
   render() {
     const { location, title } = this.props
     return (
       <div>
-        <nav className={`navbar navbar-expand navbar-dark flex-column flex-md-row fixed-top ${style.navbar}`}>
-          <div className="container-fluid">
+        <nav
+          className={`navbar navbar-expand navbar-dark flex-column flex-md-row fixed-top ${style.navbar}`}
+        >
+          <div className={'container-fluid'}>
             <div className={style.navbar__logoContainer}>
               <Link className="text-center" to="/">
-                <img className={style.navbar__logo} src={'/img/logo-navbar.svg'} alt={title} />
+                <img
+                  className={style.navbar__logo}
+                  src={'/img/logo-navbar.svg'}
+                  alt={title}
+                />
                 <h1>Dinamiza</h1>
               </Link>
             </div>
           </div>
         </nav>
-        <nav className={`navbar navbar-expand navbar-dark flex-column flex-md-row fixed-top ${style.navbar} ${style.navbar__navbar_link}`}>
+        <nav
+          className={`navbar navbar-expand navbar-dark flex-column flex-md-row fixed-top ${style.navbar} ${style.navbar__navbar_link}`}
+        >
           <div className="container-fluid">
             <div className={style.navbar__logoContainer}>
-              <Link className="text-center" style={{ display: 'block', height: '71px' }} to="/">
-                <img style={{ visibility: 'hidden' }} src={'/img/logo-navbar.svg'} alt={title} />
+              <Link
+                className="text-center"
+                style={{ display: 'block', height: '71px' }}
+                to="/"
+              >
+                <img
+                  style={{ visibility: 'hidden' }}
+                  src={'/img/logo-navbar.svg'}
+                  alt={title}
+                />
               </Link>
             </div>
             <div className={`navbar-nav-scroll ${style.navbar__menu}`}>
@@ -61,7 +77,6 @@ class Navi extends React.Component {
                     Contattaci
                   </Link>
                 </li>
-
               </ul>
             </div>
             <div className="navbar-nav flex-row d-none d-md-flex">

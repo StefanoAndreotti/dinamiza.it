@@ -12,4 +12,11 @@
     padding-left: rem(130px);
   }
 
+  &__secondImage{
+    > img{
+      max-height: rem(550px);
+      margin: auto;
+    }
+  }
+
 }

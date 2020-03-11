@@ -34,7 +34,7 @@ class Pathlog extends React.Component {
     const slideImages = ['https://plh.fpp.li/800x501', 'https://plh.fpp.li/800x502', 'https://plh.fpp.li/800x503', 'https://plh.fpp.li/800x504', 'https://plh.fpp.li/800x505', 'https://plh.fpp.li/800x506']
 
     return (
-      <div className={'page-home'}>
+      <div>
         <Layout location={location}>
           <Meta site={siteMetadata} title="Pathlog" />
 
