@@ -114,16 +114,37 @@ class Servizi extends React.Component{
                       <div className={style.testSliderOutside}>
                         <div ref={this.sliderIside} className="swiper-container">
                         <div className="swiper-wrapper">
-                          <div className={`swiper-slide ${style.testSliderInside}`} style={{ backgroundColor: 'red', color: 'white' }}>Slide 1</div>
-                          <div className={`swiper-slide ${style.testSliderInside}`}  style={{ backgroundColor: 'green', color: 'white' }}>Slide 2</div>
-                          <div className={`swiper-slide ${style.testSliderInside}`}  style={{ backgroundColor: 'yellow', color: 'white' }}>Slide 3</div>
-                          <div className={`swiper-slide ${style.testSliderInside}`}  style={{ backgroundColor: 'orange', color: 'white' }}>Slide 3</div>
-                          <div className={`swiper-slide ${style.testSliderInside}`}  style={{ backgroundColor: 'black', color: 'white' }}>Slide 3</div>
-                          <div className={`swiper-slide ${style.testSliderInside}`} style={{ backgroundColor: 'red', color: 'white' }}>Slide 1</div>
-                          <div className={`swiper-slide ${style.testSliderInside}`}  style={{ backgroundColor: 'green', color: 'white' }}>Slide 2</div>
-                          <div className={`swiper-slide ${style.testSliderInside}`}  style={{ backgroundColor: 'yellow', color: 'white' }}>Slide 3</div>
-                          <div className={`swiper-slide ${style.testSliderInside}`}  style={{ backgroundColor: 'orange', color: 'white' }}>Slide 3</div>
-                          <div className={`swiper-slide ${style.testSliderInside}`}  style={{ backgroundColor: 'black', color: 'white' }}>Slide 3</div>
+                          <div className={`swiper-slide `} style={{ backgroundColor: 'red', color: 'white' }}>
+                            <div className={style.testSliderInside}></div>
+                          </div>
+                          <div className={`swiper-slide `}  style={{ backgroundColor: 'green', color: 'white' }}>
+                            <div className={style.testSliderInside}></div>
+                          </div>
+                          <div className={`swiper-slide `}  style={{ backgroundColor: 'yellow', color: 'white' }}>
+                            <div className={style.testSliderInside}></div>
+                          </div>
+                          <div className={`swiper-slide `}  style={{ backgroundColor: 'orange', color: 'white' }}>
+                            <div className={style.testSliderInside}></div>
+                          </div>
+                          <div className={`swiper-slide `}  style={{ backgroundColor: 'black', color: 'white' }}>
+                            <div className={style.testSliderInside}></div>
+                          </div>
+                          <div className={`swiper-slide `} style={{ backgroundColor: 'red', color: 'white' }}>
+                            <div className={style.testSliderInside}></div>
+                          </div>
+                          <div className={`swiper-slide `}  style={{ backgroundColor: 'green', color: 'white' }}>
+                            <div className={style.testSliderInside}></div>
+                          </div>
+                          <div className={`swiper-slide `}  style={{ backgroundColor: 'yellow', color: 'white' }}>
+                            <div className={style.testSliderInside}></div>
+                          </div>
+                          <div className={`swiper-slide `}  style={{ backgroundColor: 'orange', color: 'white' }}>
+                            <div className={style.testSliderInside}></div>
+                          </div>
+                          <div className={`swiper-slide `}  style={{ backgroundColor: 'black', color: 'white' }}>
+                            <div className={style.testSliderInside}></div>
+                          </div>
+
                         </div>
                         <div className="swiper-pagination"></div>
                       </div>
