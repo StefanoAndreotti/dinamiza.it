@@ -20,13 +20,30 @@
       width: 100%;
       height: rem(300px);
       color: white;
-      background-color: red;
+      background-color: blue;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       z-index: 20;
     }
 
+    &__fullScreenSlide{
+
+      overflow: hidden;
+      height: 100vh;
+
+
+    }
+
   }
 
+}
+
+.testSliderOutside{
+  height: 100vh
+}
+
+.testSliderInside{
+  height: 20vh;
+  //width: 300px;
 }
