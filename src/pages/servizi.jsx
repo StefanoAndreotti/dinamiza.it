@@ -29,8 +29,9 @@ class Servizi extends React.Component{
     })
 
     const swiper2 = new Swiper(this.sliderIside.current, {
-      slidesPerView: 1,
-      spaceBetween: 0,
+      slidesPerView: 3,
+      spaceBetween: 10,
+      slidesPerColumn: 2,
       mousewheel: true,
       pagination: {
         el: '.swiper-pagination',

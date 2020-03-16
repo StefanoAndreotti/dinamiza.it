@@ -30,7 +30,7 @@
     &__fullScreenSlide{
 
       overflow: hidden;
-      height: 100vh;
+      height: 100vh  !important;
 
 
     }
@@ -40,10 +40,11 @@
 }
 
 .testSliderOutside{
-  height: 100vh
+  height: 100vh !important;
 }
 
 .testSliderInside{
-  height: 20vh;
+  display: inline-block;
+  height: 200px !important;
   //width: 300px;
 }
