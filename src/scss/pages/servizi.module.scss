@@ -1,0 +1,32 @@
+@import "scss/common";
+
+.page{
+
+  position: relative;
+  background-color: #141414;
+  overflow-x: hidden;
+  height: 100vh;
+
+
+  &__content{
+
+    position: relative;
+
+    :global(.container-fluid), :global(.row){
+      height: 100vh;
+    }
+
+    &__menu{
+      width: 100%;
+      height: rem(300px);
+      color: white;
+      background-color: red;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 20;
+    }
+
+  }
+
+}

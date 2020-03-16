@@ -68,6 +68,18 @@ class Navi extends React.Component {
                 <li
                   data-hover
                   className={
+                    location.pathname === '/servizi/'
+                      ? 'nav-item active'
+                      : 'nav-item'
+                  }
+                >
+                  <Link to="/servizi/" className="nav-link">
+                    Servizi
+                  </Link>
+                </li>
+                <li
+                  data-hover
+                  className={
                     location.pathname === '/contact/'
                       ? 'nav-item active'
                       : 'nav-item'
