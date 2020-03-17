@@ -27,7 +27,7 @@ class Servizi extends React.Component {
 
     //
     //  Init grid
-    const grig = new Isotope(elementIsotope, {
+    const grid = new Isotope(elementIsotope, {
       layoutMode: 'masonryHorizontal',
       itemSelector: '.grid-item',
       filter: '.application',
@@ -41,6 +41,89 @@ class Servizi extends React.Component {
     window.addEventListener("wheel", event => {
       constainerIsotope.scrollLeft -= event.wheelDelta
     })
+
+    //
+    // Event - onClick
+    $('.filters-button-group').on( 'click', 'button', function() {
+      const filterValue = $( this ).attr('data-filter');
+      $('.filters-button-group > button').removeClass('active')
+      $(this).addClass('active')
+      grid.arrange({ filter: filterValue })
+    });
+
+    //
+    // Event - Change on Scroll
+
+    let enableEvent = true
+
+    window.addEventListener("wheel", event => {
+
+      if (enableEvent) {
+        if (event.wheelDelta < 0) {
+
+          if (elementIsotope.offsetWidth > constainerIsotope.offsetWidth) {
+            if ($('#container').scrollLeft() + $('#container').width() == $('.grid').width()) {
+              var $newElem = $("button.active").next();
+              $('.filters-button-group > button').removeClass('active')
+              if ($newElem[0]) {
+                $newElem.addClass('active')
+              } else {
+                $("button").first().addClass('active')
+              }
+              grid.arrange({ filter: $newElem.attr('data-filter') })
+              $('#container').scrollLeft(0)
+
+              enableEvent = false
+              setTimeout(function() {
+                enableEvent = true
+              }, 2000)
+
+            }
+          } else if (elementIsotope.offsetWidth < constainerIsotope.offsetWidth) {
+            var $newElem = $("button.active").next();
+            $('.filters-button-group > button').removeClass('active')
+            if ($newElem[0]) {
+              $newElem.addClass('active')
+            } else {
+              $("button").first().addClass('active')
+            }
+            grid.arrange({ filter: $newElem.attr('data-filter') })
+            $('#container').scrollLeft(0)
+
+            enableEvent = false
+            setTimeout(function() {
+              enableEvent = true
+            }, 2000)
+
+          }
+
+        } else {
+
+          if ($('#container').scrollLeft() == 0) {
+            var $newElem = $("button.active").prev();
+            $('.filters-button-group > button').removeClass('active')
+            if ($newElem[0]) {
+              $newElem.addClass('active')
+            } else {
+              $("button").last().addClass('active')
+            }
+            grid.arrange({ filter: $newElem.attr('data-filter') })
+            $('#container').scrollLeft(0)
+
+            enableEvent = false
+            setTimeout(function() {
+              enableEvent = true
+            }, 2000)
+
+          }
+
+        }
+
+
+      }
+
+    })
+
 
   }
 
@@ -65,7 +148,17 @@ class Servizi extends React.Component {
           <div className={`container-fluid ${style.page__content}`}>
             <div className={`row`}>
               <div className={`offset-md-2 col-md-2`}>
-                <div className={style.page__content__menu}>Test</div>
+                <div className={style.page__content__menu}>
+
+                  <div className="button-group filters-button-group">
+                    <button className="button" data-filter="*">all</button>
+                    <button className="button active" data-filter=".application">application</button>
+                    <button className="button" data-filter=".website">website</button>
+                    <button className="button" data-filter=".ecommerce">ecommerce</button>
+                    <button className="button" data-filter=".digital">digital marketing</button>
+                  </div>
+
+                </div>
               </div>
               <div className={`offset-md-1 col-md-7 no-padding ${style.page__content__fullScreenSlide}`}>
                 <div ref={this.containerIsotope} id="container" className={`${style.page__content__fullScreenSlide__content}`}>
