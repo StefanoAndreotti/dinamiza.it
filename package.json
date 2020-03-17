@@ -43,6 +43,8 @@
     "glslify-loader": "^1.0.2",
     "gsap": "^2.0.2",
     "imagesloaded": "^4.1.4",
+    "isotope-layout": "^3.0.6",
+    "isotope-masonry-horizontal": "^2.0.1",
     "jquery": "^3.4.1",
     "prop-types": "^15.7.2",
     "raw-loader": "^0.5.1",

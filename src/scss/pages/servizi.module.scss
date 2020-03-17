@@ -7,7 +7,6 @@
   overflow-x: hidden;
   height: 100vh;
 
-
   &__content{
 
     position: relative;
@@ -28,22 +27,52 @@
     }
 
     &__fullScreenSlide{
-
+      display: flex;
+      align-items: center;
       overflow: hidden;
       height: 100vh;
 
+      &__content{
+        width: 50vw;
+        overflow: auto !important;
+        height: 250px;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        :global(.grid){
+          background: #DDD;
+          height: 100%; /* inherit height from body */
+
+          &:after{
+            content: '';
+            display: block;
+            clear: both;
+          }
+
+          :global(.grid-item){
+            width: 100px;
+            height: 100px;
+            background: #0D8;
+            border: 1px solid #333;
+
+            &:global(.grid-item--width2){
+              width: 200px;
+            }
+            &:global(.grid-item--height2){
+              height: 200px;
+            }
+
+          }
+
+        }
+
+      }
 
     }
 
   }
 
-}
-
-.testSliderOutside{
-  height: 100vh ;
-}
-
-.testSliderInside{
-  height: 200px;
-  //width: 300px;
 }

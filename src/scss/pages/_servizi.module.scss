@@ -1,0 +1,84 @@
+@import "scss/common";
+
+.page{
+
+  position: relative;
+  background-color: #141414;
+  overflow-x: hidden;
+  height: 100vh;
+
+
+  &__content{
+
+    position: relative;
+
+    :global(.container-fluid), :global(.row){
+      height: 100vh;
+    }
+
+    &__menu{
+      width: 100%;
+      height: rem(300px);
+      color: white;
+      background-color: blue;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 20;
+    }
+
+    &__fullScreenSlide{
+
+      overflow: hidden;
+      height: 100vh;
+
+
+    }
+
+  }
+
+}
+
+.testSliderOutside{
+
+  display: flex;
+  align-items: center;
+  height: 100vh ;
+
+  :global(.swiper-container){
+    width: 100%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  :global(.swiper-slide){
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    width: 30%;
+    height: calc(100% / 2);
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+    &:global(.fake-slide){
+      background-color: transparent;
+      width: 5%;
+      height: 200px;
+    }
+
+  }
+
+}

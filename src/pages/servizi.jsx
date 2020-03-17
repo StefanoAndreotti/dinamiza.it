@@ -4,93 +4,57 @@ import Meta from 'components/meta'
 import { siteMetadata } from '../../gatsby-config'
 import Layout from 'components/layout'
 import Lines from 'components/lines'
-import Swiper from 'swiper'
+import $ from 'jquery'
+import Isotope from 'isotope-layout'
+import 'isotope-masonry-horizontal'
 
-class Servizi extends React.Component{
+class Servizi extends React.Component {
 
   constructor() {
-    super()
-    this.page = new React.createRef()
-    this.fullScreenSlider = new React.createRef()
-    this.sliderIside = new React.createRef()
+    super();
+    this.page = React.createRef()
+    this.containerIsotope = React.createRef()
+    this.isotope = React.createRef()
   }
 
-  initSlider(){
+  initTiles(){
 
-    const swiper = new Swiper(this.fullScreenSlider.current, {
-      direction: 'vertical',
-      slidesPerView: 1,
-      spaceBetween: 0,
-      mousewheel: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    })
+    //
+    //  Init Const
+    const constainerIsotope = this.containerIsotope.current
+    const elementIsotope = this.isotope.current
 
-    const swiper2 = new Swiper(this.sliderIside.current, {
-      slidesPerView: 3,
-      spaceBetween: 10,
-      //slidesPerColumn: 2,
-      mousewheel: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    })
-
-    swiper.on('slideChange', function () {
-      swiper.mousewheel.disable()
-    })
-
-    swiper2.on('slideChangeTransitionEnd', function () {
-      if(swiper2.isEnd) {
-        swiper.mousewheel.enable()
+    //
+    //  Init grid
+    const grig = new Isotope(elementIsotope, {
+      layoutMode: 'masonryHorizontal',
+      itemSelector: '.grid-item',
+      filter: '.application',
+      masonryHorizontal: {
+        rowHeight: 100
       }
     })
 
-    swiper2.on('reachBeginning', function () {
-      swiper.mousewheel.enable()
-    })
-
-  }
-
-  initFullScreenScroll(){
-
-    const target = this.fullScreenSlider.current
-    let counterSlide = 0
-
-    window.addEventListener('wheel', function(event){
-      if (event.wheelDelta < 0) {
-        console.log('scrolling up', counterSlide)
-        counterSlide -= event.wheelDelta
-        target.scrollTop = counterSlide
-      }
-      else if (event.wheelDelta > 0) {
-        console.log('scrolling down', counterSlide);
-        counterSlide += event.wheelDelta
-        target.scrollTop = counterSlide
-      }
-    })
+    //
+    // Scroll - Horizontal
+    window.addEventListener("wheel", event => {
+      constainerIsotope.scrollLeft -= event.wheelDelta
+    });
 
   }
 
   componentDidMount() {
-    this.initSlider()
-    this.initFullScreenScroll()
+    this.initTiles()
   }
 
   componentDidUpdate() {
-    this.initSlider()
-    this.initFullScreenScroll()
+    this.initTiles()
   }
 
   render() {
-
     const { location, data } = this.props
 
-    return(
-
+    return (
       <div ref={this.page} className={style.page}>
         <Layout location={location}>
           <Meta site={siteMetadata} title="Servizi" />
@@ -100,75 +64,41 @@ class Servizi extends React.Component{
           <div className={`container-fluid ${style.page__content}`}>
             <div className={`row`}>
               <div className={`offset-md-2 col-md-2`}>
-                <div className={style.page__content__menu}>
-                  Test
-                </div>
+                <div className={style.page__content__menu}>Test</div>
               </div>
               <div className={`offset-md-1 col-md-7 no-padding ${style.page__content__fullScreenSlide}`}>
-                <div ref={this.fullScreenSlider} className="swiper-container">
-                  <div className="swiper-wrapper">
-                    <div className={`swiper-slide`} style={{ backgroundColor: 'green', color: 'white' }} >
-                      <div className={style.testSliderOutside}></div>
-                    </div>
-                    <div className={`swiper-slide`} style={{ backgroundColor: 'blue', color: 'white' }}>
-                      <div className={style.testSliderOutside}>
-                        <div ref={this.sliderIside} className="swiper-container">
-                        <div className="swiper-wrapper">
-                          <div className={`swiper-slide `} style={{ backgroundColor: 'red', color: 'white' }}>
-                            <div className={style.testSliderInside}></div>
-                          </div>
-                          <div className={`swiper-slide `}  style={{ backgroundColor: 'green', color: 'white' }}>
-                            <div className={style.testSliderInside}></div>
-                          </div>
-                          <div className={`swiper-slide `}  style={{ backgroundColor: 'yellow', color: 'white' }}>
-                            <div className={style.testSliderInside}></div>
-                          </div>
-                          <div className={`swiper-slide `}  style={{ backgroundColor: 'orange', color: 'white' }}>
-                            <div className={style.testSliderInside}></div>
-                          </div>
-                          <div className={`swiper-slide `}  style={{ backgroundColor: 'black', color: 'white' }}>
-                            <div className={style.testSliderInside}></div>
-                          </div>
-                          <div className={`swiper-slide `} style={{ backgroundColor: 'red', color: 'white' }}>
-                            <div className={style.testSliderInside}></div>
-                          </div>
-                          <div className={`swiper-slide `}  style={{ backgroundColor: 'green', color: 'white' }}>
-                            <div className={style.testSliderInside}></div>
-                          </div>
-                          <div className={`swiper-slide `}  style={{ backgroundColor: 'yellow', color: 'white' }}>
-                            <div className={style.testSliderInside}></div>
-                          </div>
-                          <div className={`swiper-slide `}  style={{ backgroundColor: 'orange', color: 'white' }}>
-                            <div className={style.testSliderInside}></div>
-                          </div>
-                          <div className={`swiper-slide `}  style={{ backgroundColor: 'black', color: 'white' }}>
-                            <div className={style.testSliderInside}></div>
-                          </div>
-
-                        </div>
-                        <div className="swiper-pagination"></div>
-                      </div>
-                      </div>
-                    </div>
-                    <div className={`swiper-slide`} style={{ backgroundColor: 'yellow', color: 'white' }}>
-                      <div className={style.testSliderOutside}></div>
-                    </div>
-                    <div className={`swiper-slide`} style={{ backgroundColor: 'orange', color: 'white' }}>
-                      <div className={style.testSliderOutside}></div>
-                    </div>
+                <div ref={this.containerIsotope} id="container" className={`${style.page__content__fullScreenSlide__content}`}>
+                  <div ref={this.isotope} className="grid">
+                    <div className="grid-item grid-item--height2 application"></div>
+                    <div className="grid-item grid-item--width2 website"></div>
+                    <div className="grid-item application digital"></div>
+                    <div className="grid-item application website"></div>
+                    <div className="grid-item grid-item--width2 grid-item--height2 application"></div>
+                    <div className="grid-item grid-item--width2 ecommerce"></div>
+                    <div className="grid-item grid-item--width2 application"></div>
+                    <div className="grid-item grid-item--height2 application"></div>
+                    <div className="grid-item website ecommerce"></div>
+                    <div className="grid-item grid-item--width2 website"></div>
+                    <div className="grid-item grid-item--height2 application"></div>
+                    <div className="grid-item website"></div>
+                    <div className="grid-item website"></div>
+                    <div className="grid-item ecommerce"></div>
+                    <div className="grid-item website digital"></div>
+                    <div className="grid-item website digital"></div>
+                    <div className="grid-item application digital"></div>
+                    <div className="grid-item application"></div>
+                    <div className="grid-item application"></div>
+                    <div className="grid-item ecommerce"></div>
+                    <div className="grid-item ecommerce"></div>
                   </div>
-                  <div className="swiper-pagination"></div>
                 </div>
               </div>
             </div>
           </div>
-
         </Layout>
       </div>
-
     )
   }
-
 }
 
 export default Servizi
