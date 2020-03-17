@@ -35,7 +35,7 @@
       &__content{
         width: 50vw;
         overflow: auto !important;
-        height: 250px;
+        height: 310px;
         -ms-overflow-style: none;
 
         &::-webkit-scrollbar {
@@ -43,7 +43,6 @@
         }
 
         :global(.grid){
-          background: #DDD;
           height: 100%; /* inherit height from body */
 
           &:after{
@@ -53,16 +52,16 @@
           }
 
           :global(.grid-item){
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             background: #0D8;
-            border: 1px solid #333;
+            margin-right: 10px;
 
             &:global(.grid-item--width2){
-              width: 200px;
+              width: 310px;
             }
             &:global(.grid-item--height2){
-              height: 200px;
+              height: 310px;
             }
 
           }

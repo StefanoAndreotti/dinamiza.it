@@ -32,7 +32,8 @@ class Servizi extends React.Component {
       itemSelector: '.grid-item',
       filter: '.application',
       masonryHorizontal: {
-        rowHeight: 100
+        rowHeight: 150,
+        gutter: 10
       }
     })
 
