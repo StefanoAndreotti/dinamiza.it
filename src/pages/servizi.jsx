@@ -5,8 +5,6 @@ import { siteMetadata } from '../../gatsby-config'
 import Layout from 'components/layout'
 import Lines from 'components/lines'
 import $ from 'jquery'
-import Isotope from 'isotope-layout'
-import 'isotope-masonry-horizontal'
 
 class Servizi extends React.Component {
 
@@ -18,6 +16,9 @@ class Servizi extends React.Component {
   }
 
   initTiles(){
+
+    const Isotope = require('isotope-layout')
+    require('isotope-masonry-horizontal')
 
     //
     //  Init Const
@@ -39,7 +40,7 @@ class Servizi extends React.Component {
     // Scroll - Horizontal
     window.addEventListener("wheel", event => {
       constainerIsotope.scrollLeft -= event.wheelDelta
-    });
+    })
 
   }
 
