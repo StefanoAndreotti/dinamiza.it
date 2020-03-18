@@ -32,7 +32,7 @@ class Servizi extends React.Component {
       itemSelector: '.grid-item',
       filter: '.application',
       masonryHorizontal: {
-        rowHeight: 150,
+        rowHeight: '.grid-sizer',
         gutter: 10
       }
     })
@@ -45,9 +45,9 @@ class Servizi extends React.Component {
 
     //
     // Event - onClick
-    $('.filters-button-group').on( 'click', 'button', function() {
+    $('.filters-button-group').on( 'click', '.button', function() {
       const filterValue = $( this ).attr('data-filter');
-      $('.filters-button-group > button').removeClass('active')
+      $('.filters-button-group > .button').removeClass('active')
       $(this).addClass('active')
       grid.arrange({ filter: filterValue })
     });
@@ -63,16 +63,19 @@ class Servizi extends React.Component {
         if (event.wheelDelta < 0) {
 
           if (elementIsotope.offsetWidth > constainerIsotope.offsetWidth) {
-            if ($('#container').scrollLeft() + $('#container').width() == $('.grid').width()) {
-              var $newElem = $("button.active").next();
-              $('.filters-button-group > button').removeClass('active')
+            if (($('#container').scrollLeft() + $('#container').width()).toFixed(0) == $('.grid').width().toFixed(0)) {
+              var $newElem = $('.button.active').next();
+              $('.filters-button-group .button').removeClass('active')
               if ($newElem[0]) {
                 $newElem.addClass('active')
               } else {
-                $("button").first().addClass('active')
+                $('.button').first().addClass('active')
               }
               grid.arrange({ filter: $newElem.attr('data-filter') })
-              $('#container').scrollLeft(0)
+
+              setTimeout(function() {
+                document.getElementById('container').scrollLeft = 0
+              }, 200)
 
               enableEvent = false
               setTimeout(function() {
@@ -81,15 +84,18 @@ class Servizi extends React.Component {
 
             }
           } else if (elementIsotope.offsetWidth < constainerIsotope.offsetWidth) {
-            var $newElem = $("button.active").next();
-            $('.filters-button-group > button').removeClass('active')
+            var $newElem = $('.button.active').next();
+            $('.filters-button-group .button').removeClass('active')
             if ($newElem[0]) {
               $newElem.addClass('active')
             } else {
-              $("button").first().addClass('active')
+              $('.button').first().addClass('active')
             }
             grid.arrange({ filter: $newElem.attr('data-filter') })
-            $('#container').scrollLeft(0)
+
+            setTimeout(function() {
+              document.getElementById('container').scrollLeft = 0
+            }, 200)
 
             enableEvent = false
             setTimeout(function() {
@@ -101,15 +107,17 @@ class Servizi extends React.Component {
         } else {
 
           if ($('#container').scrollLeft() == 0) {
-            var $newElem = $("button.active").prev();
-            $('.filters-button-group > button').removeClass('active')
+            var $newElem = $('.button.active').next();
+            $('.filters-button-group .button').removeClass('active')
             if ($newElem[0]) {
               $newElem.addClass('active')
             } else {
-              $("button").last().addClass('active')
+              $('.button').first().addClass('active')
             }
             grid.arrange({ filter: $newElem.attr('data-filter') })
-            $('#container').scrollLeft(0)
+            setTimeout(function() {
+              document.getElementById('container').scrollLeft = 0
+            }, 200)
 
             enableEvent = false
             setTimeout(function() {
@@ -152,11 +160,46 @@ class Servizi extends React.Component {
                 <div className={style.page__content__menu}>
 
                   <div className="button-group filters-button-group">
-                    <button className="button" data-filter="*">all</button>
-                    <button className="button active" data-filter=".application">application</button>
-                    <button className="button" data-filter=".website">website</button>
-                    <button className="button" data-filter=".ecommerce">ecommerce</button>
-                    <button className="button" data-filter=".digital">digital marketing</button>
+                    <div className={`button ${style.page__content__menu__section} active`} data-hover data-filter=".application">
+                      <h4>Applicazioni Web/Mobile</h4>
+                      <ul>
+                        <li>Analisi dei Benchmark</li>
+                        <li>UI/UX Design</li>
+                        <li>Content</li>
+                        <li>Sviluppo web</li>
+                        <li>SEO Optimization</li>
+                      </ul>
+                    </div>
+                    <div className={`button ${style.page__content__menu__section}`} data-hover data-filter=".website">
+                      <h4>Website</h4>
+                      <ul>
+                        <li>Analisi dei Benchmark</li>
+                        <li>UI/UX Design</li>
+                        <li>Content</li>
+                        <li>Sviluppo web</li>
+                        <li>SEO Optimization</li>
+                      </ul>
+                    </div>
+                    <div className={`button ${style.page__content__menu__section}`} data-hover data-filter=".ecommerce">
+                      <h4>eCommerce/B2B</h4>
+                      <ul>
+                        <li>Analisi dei Benchmark</li>
+                        <li>UI/UX Design</li>
+                        <li>Content</li>
+                        <li>Sviluppo web</li>
+                        <li>SEO Optimization</li>
+                      </ul>
+                    </div>
+                    <div className={`button ${style.page__content__menu__section}`} data-hover data-filter=".digital">
+                      <h4>Digital Marketing</h4>
+                      <ul>
+                        <li>Analisi dei Benchmark</li>
+                        <li>UI/UX Design</li>
+                        <li>Content</li>
+                        <li>Sviluppo web</li>
+                        <li>SEO Optimization</li>
+                      </ul>
+                    </div>
                   </div>
 
                 </div>
@@ -164,6 +207,7 @@ class Servizi extends React.Component {
               <div className={`offset-md-1 col-md-7 no-padding ${style.page__content__fullScreenSlide}`}>
                 <div ref={this.containerIsotope} id="container" className={`${style.page__content__fullScreenSlide__content}`}>
                   <div ref={this.isotope} className="grid">
+                    <div className="grid-sizer"></div>
                     <div className="grid-item grid-item--height2 application"></div>
                     <div className="grid-item grid-item--width2 website"></div>
                     <div className="grid-item application digital"></div>
