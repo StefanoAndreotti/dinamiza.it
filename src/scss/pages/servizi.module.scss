@@ -27,6 +27,7 @@
 
       &__section{
 
+        position: relative;
         text-transform: uppercase;
         font-size: 13px;
         margin: rem(50px 0);
@@ -37,6 +38,19 @@
 
         &:last-child{
           margin-bottom: 0;
+        }
+
+        &:before{
+          content: "";
+          position: absolute;
+          display: block;
+          width: rem(5px);
+          height: 70%;
+          background-color: $color-dinamiza;
+          left: rem(-20px);
+          max-height: 0;
+          transition-delay: .5s;
+          transition: 0s cubic-bezier(0.24, 0.58, 0.59, 1);
         }
 
         h4{
@@ -51,12 +65,18 @@
 
           max-height: 0px;
           overflow: hidden;
-          transition: 0.3s cubic-bezier(0.24, 0.58, 0.59, 1);
+          transition: .3s cubic-bezier(0.24, 0.58, 0.59, 1);
 
           li{}
         }
 
         &:global(.active){
+
+          &:before{
+            max-height: rem(200px);
+            transition: 1.2s cubic-bezier(0.24, 0.58, 0.59, 1);
+          }
+
           ul{
             max-height: rem(200px);
           }

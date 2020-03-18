@@ -71,6 +71,7 @@ class Servizi extends React.Component {
               } else {
                 $('.button').first().addClass('active')
               }
+              $newElem = $('.button.active')
               grid.arrange({ filter: $newElem.attr('data-filter') })
 
               setTimeout(function() {
@@ -91,6 +92,7 @@ class Servizi extends React.Component {
             } else {
               $('.button').first().addClass('active')
             }
+            $newElem = $('.button.active')
             grid.arrange({ filter: $newElem.attr('data-filter') })
 
             setTimeout(function() {
@@ -107,13 +109,14 @@ class Servizi extends React.Component {
         } else {
 
           if ($('#container').scrollLeft() == 0) {
-            var $newElem = $('.button.active').next();
+            var $newElem = $('.button.active').prev();
             $('.filters-button-group .button').removeClass('active')
             if ($newElem[0]) {
               $newElem.addClass('active')
             } else {
-              $('.button').first().addClass('active')
+              $('.button').last().addClass('active')
             }
+            $newElem = $('.button.active')
             grid.arrange({ filter: $newElem.attr('data-filter') })
             setTimeout(function() {
               document.getElementById('container').scrollLeft = 0
